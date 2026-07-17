@@ -8,7 +8,21 @@ The last new type is the **identity type**. For `x y : A`, the type `x = y` is t
 
 Rzk also has fuller forms that spell out what `=` and `refl` leave implicit. The type can name the ambient type, `x =_{A} y`, and the constructor can name its point, `refl_{x}`, or the point together with its type, `refl_{x : A}`. The short `=` and `refl` are just these with the annotations inferred, and they are all you need in this chapter.
 
-Everything else about equality comes from a single principle, **path induction**. To prove something about an arbitrary proof `p : x = y`, it is enough to prove it in the case where `p` is `refl` (and `y` is `x`). The prelude packages this as `ind-path`; using it reduces a goal about `p` to the `refl` case.
+Everything else about equality comes from a single principle, **path induction** (also called `J`). Fix a point `x : A`. To prove a statement `C` that may depend on *both* the other endpoint `y` and the path `p : x = y`, it is enough to prove the one base case where `y` is `x` and `p` is `refl`. Since `refl` is the only way to build a proof of equality, that single case covers every path.
+
+The prelude packages this as `ind-path`:
+
+```
+ind-path (A : U) (x : A)
+  (C : (y : A) → (x = y) → U)   -- the motive: what to prove, over the endpoint y and the path
+  (d : C x refl)                -- the base case, at y = x and p = refl
+  (y : A) (p : x = y)
+  : C y p
+```
+
+You supply the motive `C` and a base-case proof `d`, and get `C y p` for any endpoint and path. On the base case it computes: `ind-path A x C d x refl` reduces to `d`.
+
+For example, to reverse a path `p : x = y` the goal is `y = x`, so the motive is `C w _ := (w = x)` (the path argument is unused). Its base case `C x refl` is `x = x`, which is just `refl`. The next levels build reversal and the other path operations exactly this way.
 
 In homotopy type theory a proof of `x = y` is pictured as a **path** from `x` to `y`. That picture is where the directed intervals of the final chapter begin.
 
