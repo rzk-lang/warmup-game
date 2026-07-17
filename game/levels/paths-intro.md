@@ -22,7 +22,7 @@ ind-path (A : U) (x : A)
 
 You supply the motive `C` and a base-case proof `d`, and get `C y p` for any endpoint and path. On the base case it computes: `ind-path A x C d x refl` reduces to `d`.
 
-For example, to reverse a path `p : x = y` the goal is `y = x`, so the motive is `C w _ := (w = x)` (the path argument is unused). Its base case `C x refl` is `x = x`, which is just `refl`. The next levels build reversal and the other path operations exactly this way.
+For example, path induction can even talk about the path itself. With the motive `C w q := (q = q)`, the base case `C x refl` is `refl = refl`, true by `refl`, so induction gives `p = p` for every path `p`. The levels below use simpler motives that ignore the path argument, which is why their solutions read `\ w _ → …` and then prove their own base case.
 
 In homotopy type theory a proof of `x = y` is pictured as a **path** from `x` to `y`. That picture is where the directed intervals of the final chapter begin.
 
