@@ -88,3 +88,25 @@ chapters:
         role: extra
     - prose:
         file: levels/logic-summary.md
+- title: Identity types and paths
+  sections:
+  - id: paths
+    title: Identity types and paths
+    items:
+    - prose:
+        file: levels/paths-intro.md
+    - puzzle:
+        file: levels/refl.rzk.md
+    - puzzle:
+        file: levels/rev.rzk.md
+    - puzzle:
+        file: levels/ap.rzk.md
+    - puzzle:
+        file: levels/concat.rzk.md
+    - puzzle:
+        file: levels/transport.rzk.md
+    - puzzle:
+        file: levels/right-unit.rzk.md
+        role: extra
+    - prose:
+        file: levels/paths-summary.md
