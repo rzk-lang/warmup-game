@@ -60,6 +60,11 @@ term in isolation.
 - **One hole per level.** Honest goal types (only the intended term fits).
 - **Hints general to specific, revealed incrementally**; never give the whole
   term at once. `when-goal` only when the post-move goal is distinctive.
+- **Name Π-binders in multi-argument goals.** An intro move borrows the goal's
+  Π-binder name; an anonymous Π (`B → A → C`) makes two intro taps collide on
+  `x₁` (the second shadows the first). Write `(b : B) → (a : A) → C` so
+  tap-through yields `\ b → ?` then `\ a → ?`. Quote a `statement` containing
+  `:` in the front-matter.
 - **Postulate constraint.** Rzk natively has Π, Σ/×, `Unit`, identity types;
   **not** `Void`, `coprod`, `Nat`, funext, univalence. Keep content in the
   native fragment; never present a postulated type as if Rzk has it.
