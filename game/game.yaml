@@ -10,6 +10,8 @@ chapters:
     items:
     - prose:
         file: levels/how-holes-work.md
+    - prose:
+        file: levels/anatomy-of-a-def.md
     - puzzle:
         file: levels/first-hole.rzk.md
     - prose:

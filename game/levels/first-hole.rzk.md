@@ -6,7 +6,7 @@ hints:
 - text: 'You are given a value `x : A`, and the goal asks for an `A`. Hand it back.'
 ---
 
-The simplest possible proof: you are handed a value and asked for one of the same type. Read the context, find what fits the goal, and return it.
+This is your first definition to finish. It is handed a type `A` and a value `x : A`, and its goal is to produce something of type `A`. Look at what the context gives you, and fill the hole with something that fits.
 
 Fill it.
 
