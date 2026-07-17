@@ -1,0 +1,53 @@
+title: Rzk Game Template
+
+# A small but complete game over the hom A x x substrate. It covers every item
+# type, prose role, and puzzle feature, so a forking author can read one of each
+# and copy it. The mathematics is deliberately trivial; the point is the
+# authoring surface. See docs/authoring.md in the engine repo.
+#
+# The table of contents is a list of chapters. A chapter has an optional title
+# and a list of sections; a section has an id, a title, and ordered items. An
+# untitled chapter (the first one below) renders its sections at the top level,
+# so a flat game is just one untitled chapter. A titled chapter (the second)
+# shows as a heading in the level picker.
+chapters:
+- sections:
+  - id: getting-started
+    title: Getting started
+    items:
+    - prose:
+        file: levels/how-holes-work.md
+    - prose:
+        file: levels/start.md
+    - prose:
+        file: levels/outcomes.md
+    - puzzle:
+        file: levels/identity.rzk.md
+    - puzzle:
+        file: levels/self-check.rzk.md
+        role: pretest
+        remedies:
+        - label: 'Review: Getting started'
+          section: getting-started
+        - label: 'Rzk: the directed interval'
+          url: https://rzk-lang.github.io/sHoTT/simplicial-hott/05-segal-types.rzk/
+    - puzzle:
+        file: levels/carry-on.rzk.md
+        prereqs:
+        - self-check
+    - prose:
+        file: levels/recap.md
+- title: More moves
+  sections:
+  - id: more-moves
+    title: Gating and a bonus
+    items:
+    - prose:
+        file: levels/aside.md
+    - puzzle:
+        file: levels/no-idj.rzk.md
+    - puzzle:
+        file: levels/bonus.rzk.md
+        role: extra
+    - prose:
+        file: levels/done.md
