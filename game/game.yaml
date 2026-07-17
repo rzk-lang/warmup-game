@@ -61,3 +61,30 @@ chapters:
         file: levels/dsnd.rzk.md
     - prose:
         file: levels/pairs-summary.md
+- title: Propositions as types
+  sections:
+  - id: logic
+    title: Propositions as types
+    items:
+    - prose:
+        file: levels/logic-intro.md
+    - puzzle:
+        file: levels/truth.rzk.md
+    - puzzle:
+        file: levels/weakening.rzk.md
+    - puzzle:
+        file: levels/modus-ponens.rzk.md
+    - puzzle:
+        file: levels/distribute.rzk.md
+    - puzzle:
+        file: levels/undistribute.rzk.md
+    - puzzle:
+        file: levels/s-axiom.rzk.md
+        role: extra
+    - prose:
+        file: levels/negation-aside.md
+    - puzzle:
+        file: levels/double-negation.rzk.md
+        role: extra
+    - prose:
+        file: levels/logic-summary.md
