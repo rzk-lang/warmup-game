@@ -6,11 +6,11 @@ role: bridge-in
 
 Functions are the core of type theory. A function type is written `A → B`. A function is built with a λ-abstraction, written `\ x → body`: the backslash `\` stands for the Greek λ, a λ with one leg missing, the same shorthand Haskell uses. A function is applied to an argument by juxtaposition, `f x`.
 
-Three shorthands appear throughout, and all of them nest to the right:
+Three shorthands appear throughout:
 
-- `\ x y z → …` is short for `\ x → \ y → \ z → …` — bind one argument at a time.
-- `f x y z` is short for `((f x) y) z` — apply to one argument at a time.
-- `A → B → C → D` is short for `A → (B → (C → D))` — the arrow groups to the right.
+- `\ x y z → …` is short for `\ x → \ y → \ z → …`: bind one argument at a time, grouping to the right.
+- `f x y z` is short for `((f x) y) z`: apply to one argument at a time, grouping to the left.
+- `A → B → C → D` is short for `A → (B → (C → D))`: the arrow groups to the right.
 
 Together these are *currying*: a function of several arguments is really a function that returns a function, so it can be applied to its arguments one at a time (*partial application*).
 
