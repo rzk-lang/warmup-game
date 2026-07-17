@@ -4,8 +4,12 @@ title: How holes work
 role: bridge-in
 ---
 
-Every puzzle gives you a term with a hole, written `?`. Your job is to fill it.
+Welcome to the Rzk warm-up. This game teaches the basics of Rzk by having you fill in proofs, one small hole at a time. No prior Rzk is assumed.
 
-Focus a hole and the engine shows its **goal** (the type the hole must have) and its **context** (the variables, cube variables, and tope assumptions in scope). It also offers **moves**: ways to make progress, such as introducing a binder (`λ-intro`), applying a lemma the level grants, or splitting on a case. Tap a move to apply it, or type into the editable region directly. Press Check to typecheck; you win when the term has no holes left.
+Every puzzle gives you a term with a hole, written `?`. Your job is to fill it so the term type-checks with no holes left.
 
-This page is special. Because its `id` is `how-holes-work`, the engine shows a persistent "❓ Holes" link in the header that jumps back here from any page. Keep a page with this id to give your players a reminder they can always reach.
+Focus a hole and the engine shows its **goal** (the type the hole must have) and its **context** (the variables in scope). It also offers **moves**: ways to make progress, such as introducing a function argument (`λ-intro`) or applying something from the context. Tap a move to apply it, or type into the editable region directly. Press Check to type-check; you win when the term has no holes left.
+
+If you ever get stuck, ask for a **hint** with the hint button. Some hints appear only when the goal has a particular shape.
+
+This page is always one tap away: the header keeps a persistent "❓ Holes" link that jumps back here from anywhere in the game.

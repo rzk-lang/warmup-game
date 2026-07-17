@@ -1,25 +1,32 @@
-# rzk-game-template
+# warmup-game
 
-A starter [`rzk-game`](https://github.com/rzk-lang/rzk-game) game, ready to fork. It is a small but complete game over the `hom A x x` substrate, with one of each item type, so each level can be read and copied. Fork it, edit `game/`, and get a live site.
+The default Rzk tutorial. An on-ramp to [Rzk](https://github.com/rzk-lang/rzk)'s type theory, played by filling holes: start from nothing, learn functions, pairs, a little logic, and identity types, and arrive at a first taste of directed types. No prior Rzk is assumed. It is the warm-up before the topic games ([yoneda-game](https://github.com/rzk-lang/yoneda-game) and others).
 
 ## How it works
 
-The game is just data: a `game/game.yaml` table of contents and `game/levels/*` files. A level is either a puzzle (Rzk source in fenced `prelude` / `template` / `solution` blocks, plus Markdown prose) or a prose page. There is no Haskell toolchain here — [`rzk-game-action`](https://github.com/rzk-lang/rzk-game-action) fetches the prebuilt engine and bundler from a pinned [`rzk-game`](https://github.com/rzk-lang/rzk-game) release, bundles `game/` into `game.json`, assembles the static site, and `.github/workflows/deploy.yml` publishes it to GitHub Pages.
+The game is just data: a `game/game.yaml` table of contents and `game/levels/*` files. A level is either a puzzle (Rzk source in fenced `prelude` / `template` / `solution` blocks, plus Markdown prose) or a prose page. There is no Haskell toolchain here. [`rzk-game-action`](https://github.com/rzk-lang/rzk-game-action) fetches the prebuilt engine and bundler from a pinned [`rzk-game`](https://github.com/rzk-lang/rzk-game) release, bundles `game/` into `game.json`, assembles the static site, and `.github/workflows/deploy.yml` publishes it to GitHub Pages.
 
 The pin lives in `deploy.yml` as the `engine-version` input. It is set to a released tag for reproducible builds; bump it to adopt a newer engine.
 
-## What's inside
+## Content
 
-Two chapters cover the full authoring surface — the first untitled (its sections render at the top level), the second titled "More moves":
+The chapters follow a points-to-morphisms arc. Authored so far:
 
-- **Getting started** — a `how-holes-work` page (which lights up the header's ❓ link), a bridge-in and an outcomes page, an identity puzzle carrying hints (one plain, one contextual), a self-check pre-test with remedies, a follow-on puzzle gated behind the pre-test, and a summary.
-- **Gating and a bonus** — a mid-section note, a single gated puzzle that exercises the whole gate (a structured inventory with a `type` override, a `forbidden` built-in `idJ`, an ungranted shortcut, and a multi-block prelude), an optional ★ bonus, and a closing summary.
+- **Getting started** — how holes work (the header's ❓ link), a first trivial hole, a summary.
+- **Functions** — identity, constant, composition, argument swapping, the ★ `S` combinator, and dependent application.
 
-See the engine's [authoring guide](https://github.com/rzk-lang/rzk-game/blob/main/docs/authoring.md) for the file shapes, the schema, and the how-tos.
+Later chapters (planned): pairs and Σ-types, propositions as types, identity types and path algebra, a taste of HoTT, and a closing taste of directed types. See `CLAUDE.md` for the authoring conventions.
 
-## Forking this template
+## Playing locally
 
-Two things make a fork live:
+There is no build command in this repo; typechecking runs in the engine. To iterate on content off-CI, bundle `game/` from a [`rzk-game`](https://github.com/rzk-lang/rzk-game) checkout that has been built once (`make build`), then serve:
 
-1. **Edit `game/`.** Replace the table of contents and levels with your own. Keep the `game/levels/` layout and the front-matter shapes.
-2. **Enable Pages.** After the first push to `main` deploys, set the repository's Pages source to the `gh-pages` branch (Settings → Pages). The site then goes live at the repository's Pages URL.
+```sh
+# from a rzk-game checkout
+make bundle GAME=/path/to/warmup-game/game/game.yaml
+make serve
+```
+
+## Authoring
+
+Add a level by writing `game/levels/<name>.rzk.md` and referencing it from `game/game.yaml`. The `statement` and `template` hole, the `solution`, and any `inventory` must stay consistent: the solution must typecheck against the prelude and close exactly the hole the template leaves. The engine's [authoring guide](https://github.com/rzk-lang/rzk-game/blob/main/docs/authoring.md) has the file shapes and schema; `CLAUDE.md` records this game's prose and teaching conventions.
