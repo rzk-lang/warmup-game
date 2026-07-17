@@ -28,4 +28,4 @@ Fill it.
 
 ## Conclusion
 
-A hole is closed by a term of its goal type. Here the context already held one, so nothing had to be built.
+A hole is filled by any value of its goal type. Here the context already held one, so nothing had to be built.

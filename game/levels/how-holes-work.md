@@ -4,12 +4,17 @@ title: How holes work
 role: bridge-in
 ---
 
-Welcome to the Rzk warm-up. This game teaches the basics of Rzk by having you fill in proofs, one small hole at a time. No prior Rzk is assumed.
+Welcome to the Rzk warm-up. This game teaches Rzk one small step at a time, and assumes you have never seen it before.
 
-Every puzzle gives you a term with a hole, written `?`. Your job is to fill it so the term type-checks with no holes left.
+Every puzzle hands you an unfinished piece of Rzk code with a gap in it, written `?`. That gap is a **hole**. Your job is to fill every hole so the code is complete.
 
-Focus a hole and the engine shows its **goal** (the type the hole must have) and its **context** (the variables in scope). It also offers **moves**: ways to make progress, such as introducing a function argument (`λ-intro`) or applying something from the context. Tap a move to apply it, or type into the editable region directly. Press Check to type-check; you win when the term has no holes left.
+Click a hole and the panel beside the editor shows two things:
 
-If you ever get stuck, ask for a **hint** with the hint button. Some hints appear only when the goal has a particular shape.
+- its **goal** — what your answer has to be (its type), and
+- its **context** — everything you already have to work with right there: the values and assumptions in scope.
 
-This page is always one tap away: the header keeps a persistent "❓ Holes" link that jumps back here from anywhere in the game.
+The engine also suggests **moves**: ready-made steps you can tap to make progress, each one worked out from the goal. Some build an answer from the goal's shape; others reuse something from the context. You can always type into the editor by hand instead.
+
+Press **Check** to see how you did. A puzzle is solved once the code checks with no holes left. If you get stuck, ask for a **hint** with the hint button; some hints appear only once the goal has a certain shape.
+
+This page is always one tap away: the header keeps a "❓ Holes" link that jumps back here from anywhere in the game.

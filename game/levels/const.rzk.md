@@ -3,7 +3,7 @@ id: const
 title: The constant function
 statement: B → A
 hints:
-- text: 'Introduce the argument with `λ-intro`, even though you will not use it.'
+- text: 'Introduce the argument (the introduction move, or `\ ... → ?` by hand), even though you will not use it.'
 - text: 'The body ignores that argument and returns `x`. Write `\ _ → x`; the `_` discards the input.'
 ---
 

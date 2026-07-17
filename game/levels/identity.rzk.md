@@ -3,7 +3,7 @@ id: identity
 title: The identity function
 statement: A → A
 hints:
-- text: 'The goal is a function type. Introduce its argument: tap `λ-intro` or type `\ x → ?`.'
+- text: 'The goal is a function type. Introduce its argument: tap the introduction move, or type `\ x → ?`.'
 - text: 'Now the goal is `A`, with `x : A` in the context. Return `x`.'
 ---
 
@@ -29,4 +29,4 @@ Build it.
 
 ## Conclusion
 
-`λ-intro` turns a goal `A → A` into a goal `A` with the argument in scope. From there the argument itself is the answer.
+Introducing the argument turns a goal `A → A` into a goal `A`, with that argument in scope. From there the argument itself is the answer.
