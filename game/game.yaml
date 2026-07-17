@@ -38,3 +38,26 @@ chapters:
         file: levels/apply.rzk.md
     - prose:
         file: levels/functions-summary.md
+- title: Pairs and Σ-types
+  sections:
+  - id: pairs
+    title: Pairs and Σ-types
+    items:
+    - prose:
+        file: levels/pairs-intro.md
+    - puzzle:
+        file: levels/pair.rzk.md
+    - puzzle:
+        file: levels/fst.rzk.md
+    - puzzle:
+        file: levels/swap.rzk.md
+    - puzzle:
+        file: levels/curry.rzk.md
+    - puzzle:
+        file: levels/uncurry.rzk.md
+    - puzzle:
+        file: levels/dpair.rzk.md
+    - puzzle:
+        file: levels/dsnd.rzk.md
+    - prose:
+        file: levels/pairs-summary.md
