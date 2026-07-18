@@ -15,3 +15,5 @@ So proving a propositional tautology is writing a function of the right type, an
 Two connectives are missing. **Disjunction** ("or") and **negation** ("not") need types Rzk does not have built in, so they wait until the optional aside at the end of the chapter.
 
 *By the end of this chapter you will be able to:* prove truth, weakening, and modus ponens, and show that implication distributes over conjunction, all as terms.
+
+*Further reading:* the [HoTT Book](https://homotopytypetheory.org/book/), §1.11.

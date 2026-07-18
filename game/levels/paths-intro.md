@@ -27,3 +27,5 @@ For example, path induction can even talk about the path itself. With the motive
 In homotopy type theory a proof of `x = y` is pictured as a **path** from `x` to `y`.
 
 *By the end of this chapter you will be able to:* reverse and concatenate paths, apply a function to a path, and transport a value along a path, each by path induction.
+
+*Further reading:* the [HoTT Book](https://homotopytypetheory.org/book/), §1.12 and §2.1.

@@ -17,3 +17,5 @@ Together these are *currying*: a function of several arguments is really a funct
 Meeting a function goal always starts the same way: introduce the argument. Tapping the introduction move (or typing `\ x → ?` by hand) turns a goal `A → B` into a goal `B`, with a new `x : A` added to the context. Using a function you already have is the reverse: apply it to an argument.
 
 *By the end of this chapter you will be able to:* build the identity and constant functions, compose functions, reorder arguments, and apply a dependent function. The `S` combinator is marked ★ and may be skipped.
+
+*Further reading:* the [HoTT Book](https://homotopytypetheory.org/book/), §§1.2 and 1.4.

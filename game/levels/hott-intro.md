@@ -21,3 +21,5 @@ is-set   A := (x y : A) → is-prop (x = y)
 One fact about `Unit` is used below: in Rzk every element of `Unit` is definitionally `unit`, so an equality between elements of `Unit` holds by `refl`.
 
 *By the end of this chapter you will be able to:* show `Unit` is a proposition and contractible, prove that contractible types are propositions, and prove that an inhabited proposition is contractible.
+
+*Further reading:* the [HoTT Book](https://homotopytypetheory.org/book/), §§3.1, 3.3, and 3.11.
