@@ -4,7 +4,7 @@ title: Identity types and paths
 role: bridge-in
 ---
 
-The last new type is the **identity type**. For `x y : A`, the type `x = y` is the type of proofs that `x` and `y` are equal. It has one constructor, `refl`, the proof that anything equals itself: `refl : x = x`.
+The last new type is the **identity type**. For a type `A` and elements `x y : A`, the type `x = y` is the type of equalities between `x` and `y`, also called *identities* or *paths*. It has one constructor, `refl`: the proof by reflexivity that everything equals itself, `refl : x = x`.
 
 Rzk also has fuller forms that spell out what `=` and `refl` leave implicit. The type can name the ambient type, `x =_{A} y`, and the constructor can name its point, `refl_{x}`, or the point together with its type, `refl_{x : A}`. The short `=` and `refl` are just these with the annotations inferred, and they are all you need in this chapter.
 

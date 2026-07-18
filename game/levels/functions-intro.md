@@ -4,7 +4,7 @@ title: Functions
 role: bridge-in
 ---
 
-Functions are the core of type theory. A function type is written `A → B`. A function is built with a λ-abstraction, written `\ x → body`: the backslash `\` stands for the Greek λ, a λ with one leg missing, the same shorthand Haskell uses. A function is applied to an argument by juxtaposition, `f x`.
+A **function type** `A → B` is the type of functions with an argument of type `A` and a result of type `B`. More generally the result type may depend on the argument, written `(x : A) → B x`; such a *dependent function* returns at the end of this chapter. A function is built with a λ-abstraction, written `\ x → body`: the backslash `\` stands for the Greek λ, a λ with one leg missing, the same shorthand Haskell uses. It is applied to an argument by juxtaposition, `f x`.
 
 Three shorthands appear throughout:
 

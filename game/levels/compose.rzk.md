@@ -7,7 +7,7 @@ hints:
 - text: 'You have no `C` at hand, but `g` makes one from a `B`, and `f` makes a `B` from `x`. Chain them: `g (f x)`.'
 ---
 
-Composition chains two functions: from `f : A → B` and `g : B → C`, build a function `A → C` that runs each input through `f` and then `g`. It is the most-used construction in all of type theory.
+Composition chains two functions: from `f : A → B` and `g : B → C`, build a function `A → C` that runs each input through `f` and then `g`.
 
 Build it.
 
