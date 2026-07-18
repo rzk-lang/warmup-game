@@ -31,19 +31,19 @@ Playing:
 - **move**: a suggested step you can tap. An *introduction* builds a value from the goal's shape (a `\` for a function, a pair for a product); a *give* reuses something from the context.
 - **Check**: type-checks the code; you win when no holes remain.
 
-Language:
+Language. Each entry notes the common alternative names you may meet elsewhere.
 
-- **type**: a classification of values; `A : U` reads "`A` is a type".
-- **universe** (`U`): the type whose values are themselves types.
-- **value**: an expression, such as the one that fills a hole.
-- **function** (`A → B`): sends an `A` to a `B`; written `\ x → …` and applied by juxtaposition, `f x`.
-- **λ-abstraction** (`\ x → …`): a function written inline; `\` stands for the Greek λ.
-- **dependent function** (`(x : A) → B x`): a function whose result type depends on the argument.
-- **product** (`prod A B`): the type of pairs of an `A` and a `B`; here a shorthand for `Σ (a : A) , B`.
+- **type**: a classification of values; `A : U` reads "`A` is a type". Pictured as a *space* in homotopy type theory.
+- **universe** (`U`): the type whose values are themselves types. Often written `Type`.
+- **value**: an expression, such as the one that fills a hole. Also called a *term*, an *element*, or (for a type seen as a space) a *point*.
+- **function** (`A → B`): sends an `A` to a `B`; written `\ x → …` and applied by juxtaposition, `f x`. Also called a *map*.
+- **λ-abstraction** (`\ x → …`): a function written inline; `\` stands for the Greek λ. Also called an *anonymous function*.
+- **dependent function** (`(x : A) → B x`): a function whose result type depends on the argument. Also called a *Π-type* (pi-type); one such function is a *section* of the family `B`.
+- **product** (`prod A B`): the type of pairs of an `A` and a `B`; here a shorthand for `Σ (a : A) , B`. As a proposition it is *conjunction*.
 - **pair** (`(a , b)`) and **projections** (`first`, `second`): build a pair and take it apart.
-- **Σ-type** (`Σ (x : A) , B x`): a dependent pair, where the second type may depend on the first value.
-- **type family** (`B : A → U`): a type `B x` for each point `x`.
+- **Σ-type** (`Σ (x : A) , B x`): a dependent pair, where the second type may depend on the first value. Also called a *dependent pair type* or *dependent sum*.
+- **type family** (`B : A → U`): a type `B x` for each point `x`. Also called a *fibration*; each `B x` is a *fiber*.
 - **proposition as type** (Curry–Howard): a proposition is a type, and a proof is a value of that type.
-- **Unit** / **unit**: truth (`⊤`), the proposition that always holds, with proof `unit`.
-- **identity type** (`x = y`): the type of proofs that `x` equals `y`; its one constructor is `refl`.
-- **path induction** (`ind-path`): to prove a statement about a path `p : x = y`, it is enough to prove the case where `p` is `refl`. The **motive** is that statement, as it depends on the endpoint and the path.
+- **Unit** / **unit**: truth (`⊤`), the proposition that always holds, with proof `unit`. Also called the *terminal type*.
+- **identity type** (`x = y`): the type of proofs that `x` equals `y`; its one constructor is `refl`. Also called the *path type*; a proof is a *path*.
+- **path induction** (`ind-path`): to prove a statement about a path `p : x = y`, it is enough to prove the case where `p` is `refl`. Also called the *J rule*. The **motive** is that statement, as it depends on the endpoint and the path.
