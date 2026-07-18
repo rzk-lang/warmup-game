@@ -2,11 +2,15 @@ title: Rzk Warm-up
 
 # The default Rzk tutorial: an on-ramp to Rzk's type theory, built by filling
 # holes. It starts from nothing and, over later chapters, arrives at a first
-# taste of directed types. See notes/conventions.md for the authoring rules.
+# taste of directed types. See notes/content-map.md for the full chapter/section
+# plan (mapping the BMSTU tutorial), and notes/conventions.md for the authoring
+# rules. Chapters "Equivalences and univalence" and "A taste of directed types"
+# are planned but not yet authored.
 chapters:
-- sections:
+- title: Getting started
+  sections:
   - id: getting-started
-    title: Getting started
+    title: How holes work
     items:
     - prose:
         file: levels/how-holes-work.md
@@ -16,7 +20,7 @@ chapters:
         file: levels/first-hole.rzk.md
     - prose:
         file: levels/getting-started-summary.md
-- title: Functions
+- title: Dependent types
   sections:
   - id: functions
     title: Functions
@@ -38,8 +42,6 @@ chapters:
         file: levels/apply.rzk.md
     - prose:
         file: levels/functions-summary.md
-- title: Pairs and Σ-types
-  sections:
   - id: pairs
     title: Pairs and Σ-types
     items:
@@ -88,7 +90,7 @@ chapters:
         role: extra
     - prose:
         file: levels/logic-summary.md
-- title: Identity types and paths
+- title: Identity types
   sections:
   - id: paths
     title: Identity types and paths
@@ -110,7 +112,7 @@ chapters:
         role: extra
     - prose:
         file: levels/paths-summary.md
-- title: A taste of homotopy type theory
+- title: Sets and logic
   sections:
   - id: hlevels
     title: Contractibility, propositions, and sets
