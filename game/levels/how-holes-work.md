@@ -47,3 +47,6 @@ Language. Each entry notes the common alternative names you may meet elsewhere.
 - **Unit** / **unit**: truth, the proposition that always holds, with proof `unit`. Also called the *terminal type*.
 - **identity type** (`x = y`): the type of proofs that `x` equals `y`; its one constructor is `refl`. Also called the *path type*; a proof is a *path*.
 - **path induction** (`ind-path`): to prove a statement about a path `p : x = y`, it is enough to prove the case where `p` is `refl`. Also called the *J rule*. The **motive** is that statement, as it depends on the endpoint and the path.
+- **contractible** (`is-contr A`): `A` has a center point to which every point is equal.
+- **proposition** (`is-prop A`): any two points of `A` are equal. Also called a *mere proposition*.
+- **set** (`is-set A`): any two proofs of one equality in `A` are equal.

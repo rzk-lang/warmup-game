@@ -110,3 +110,20 @@ chapters:
         role: extra
     - prose:
         file: levels/paths-summary.md
+- title: A taste of homotopy type theory
+  sections:
+  - id: hlevels
+    title: Contractibility, propositions, and sets
+    items:
+    - prose:
+        file: levels/hott-intro.md
+    - puzzle:
+        file: levels/is-prop-unit.rzk.md
+    - puzzle:
+        file: levels/is-contr-unit.rzk.md
+    - puzzle:
+        file: levels/contr-is-prop.rzk.md
+    - puzzle:
+        file: levels/inhabited-prop-is-contr.rzk.md
+    - prose:
+        file: levels/hott-summary.md
