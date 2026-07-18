@@ -34,7 +34,7 @@ Playing:
 Language. Each entry notes the common alternative names you may meet elsewhere.
 
 - **type**: a classification of values; `A : U` reads "`A` is a type". Pictured as a *space* in homotopy type theory.
-- **universe** (`U`): the type whose values are themselves types. Often written `Type`.
+- **universe** (`U`): the type whose values are themselves types.
 - **value**: an expression, such as the one that fills a hole. Also called a *term*, an *element*, or (for a type seen as a space) a *point*.
 - **function** (`A → B`): sends an `A` to a `B`; written `\ x → …` and applied by juxtaposition, `f x`. Also called a *map*.
 - **λ-abstraction** (`\ x → …`): a function written inline; `\` stands for the Greek λ. Also called an *anonymous function*.
