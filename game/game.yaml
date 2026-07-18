@@ -42,11 +42,11 @@ chapters:
         file: levels/apply.rzk.md
     - prose:
         file: levels/functions-summary.md
-  - id: pairs
-    title: Pairs and Σ-types
+  - id: products
+    title: Products
     items:
     - prose:
-        file: levels/pairs-intro.md
+        file: levels/products-intro.md
     - puzzle:
         file: levels/pair.rzk.md
     - puzzle:
@@ -57,12 +57,41 @@ chapters:
         file: levels/curry.rzk.md
     - puzzle:
         file: levels/uncurry.rzk.md
+    - prose:
+        file: levels/products-summary.md
+  - id: type-formers
+    title: Type formers
+    items:
+    - prose:
+        file: levels/type-formers-intro.md
+    - puzzle:
+        file: levels/rec-prod.rzk.md
+    - puzzle:
+        file: levels/ind-prod.rzk.md
+    - prose:
+        file: levels/type-formers-summary.md
+  - id: sigma
+    title: Σ-types
+    items:
+    - prose:
+        file: levels/sigma-intro.md
     - puzzle:
         file: levels/dpair.rzk.md
     - puzzle:
         file: levels/dsnd.rzk.md
+    - puzzle:
+        file: levels/rec-sigma.rzk.md
+    - puzzle:
+        file: levels/ind-sigma.rzk.md
     - prose:
-        file: levels/pairs-summary.md
+        file: levels/sigma-summary.md
+  - id: axiom-of-choice
+    title: The axiom of choice
+    items:
+    - prose:
+        file: levels/aoc-intro.md
+    - puzzle:
+        file: levels/aoc.rzk.md
 - title: Propositions as types
   sections:
   - id: logic
