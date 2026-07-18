@@ -15,7 +15,7 @@ The chapters follow a points-to-morphisms arc. Authored so far:
 - **Getting started** — how holes work (the header's ❓ link), a first trivial hole, a summary.
 - **Functions** — identity, constant, composition, argument swapping, the ★ `S` combinator, and dependent application.
 
-Later chapters (planned): pairs and Σ-types, propositions as types, identity types and path algebra, a taste of HoTT, and a closing taste of directed types. See `CLAUDE.md` for the authoring conventions.
+Later chapters (planned): propositions as types, identity types and path algebra, equivalences and univalence, sets and logic, and a closing taste of directed types.
 
 ## Playing locally
 
@@ -29,4 +29,4 @@ make serve
 
 ## Authoring
 
-Add a level by writing `game/levels/<name>.rzk.md` and referencing it from `game/game.yaml`. The `statement` and `template` hole, the `solution`, and any `inventory` must stay consistent: the solution must typecheck against the prelude and close exactly the hole the template leaves. The engine's [authoring guide](https://github.com/rzk-lang/rzk-game/blob/main/docs/authoring.md) has the file shapes and schema; `CLAUDE.md` records this game's prose and teaching conventions.
+Add a level by writing `game/levels/<name>.rzk.md` and referencing it from `game/game.yaml`. The `statement` and `template` hole, the `solution`, and any `inventory` must stay consistent: the solution must typecheck against the prelude and close exactly the hole the template leaves. The engine's [authoring guide](https://github.com/rzk-lang/rzk-game/blob/main/docs/authoring.md) has the file shapes and schema.
