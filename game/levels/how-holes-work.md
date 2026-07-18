@@ -19,6 +19,20 @@ Press **Check** to see how you did. A puzzle is solved once the code checks with
 
 This page is always one tap away: the header keeps a "❓ Holes" link that jumps back here from anywhere in the game.
 
+## The road ahead
+
+The game builds Rzk's type theory from nothing, one chapter at a time:
+
+1. **Getting started** — holes, and how to read a definition.
+2. **Dependent types** — functions, pairs, and Σ-types, then coproducts, booleans, and numbers.
+3. **Propositions as types** — logic read as types: implication, conjunction, negation, and quantifiers.
+4. **Identity types** — equality, path induction, and the algebra of paths.
+5. **Equivalences and univalence** — what it means for two types to be the same.
+6. **Sets and logic** — contractible types, propositions, and sets.
+7. **A taste of directed types** — the cubes, topes, and morphisms that Rzk was built for.
+
+Nothing is assumed before chapter 1, and each chapter builds on the ones before it.
+
 ## Glossary
 
 A quick reference for the words this game uses. Skip it for now, and come back whenever a term is unfamiliar.
