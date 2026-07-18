@@ -8,7 +8,7 @@ Under the **Curry–Howard correspondence**, a proposition is a type and a proof
 
 - **implication** `A → B` is a function: it turns a proof of `A` into a proof of `B`.
 - **conjunction** "`A` and `B`" is the product `prod A B`: a proof is a pair of a proof of `A` and a proof of `B`.
-- **truth** `⊤` is `Unit`: it has the single proof `unit`, so it always holds.
+- **truth** is `Unit`: it has the single proof `unit`, so it always holds.
 
 So proving a propositional tautology is writing a function of the right type, and the term you write *is* the proof.
 

@@ -7,7 +7,7 @@ hints:
 - text: 'That proof is `unit`. Write `\ _ → unit`.'
 ---
 
-Truth, written `⊤`, is the proposition that always holds. In Rzk it is `Unit`, and its single proof is `unit`. Show that truth follows from anything: given any `A`, produce a proof of `Unit`.
+Truth is the proposition that always holds. In Rzk it is `Unit`, and its single proof is `unit`. Show that truth follows from anything: given any `A`, produce a proof of `Unit`.
 
 Build it.
 
@@ -29,4 +29,4 @@ Build it.
 
 ## Conclusion
 
-`Unit` is truth: it always holds, with the single proof `unit`, whatever else is in play. A proof of `A → ⊤` simply discards its input.
+`Unit` is truth: it always holds, with the single proof `unit`, whatever else is in play. A proof of `A → Unit` simply discards its input.

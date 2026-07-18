@@ -44,6 +44,6 @@ Language. Each entry notes the common alternative names you may meet elsewhere.
 - **Σ-type** (`Σ (x : A) , B x`): a dependent pair, where the second type may depend on the first value. Also called a *dependent pair type* or *dependent sum*.
 - **type family** (`B : A → U`): a type `B x` for each point `x`. Also called a *fibration*; each `B x` is a *fiber*.
 - **proposition as type** (Curry–Howard): a proposition is a type, and a proof is a value of that type.
-- **Unit** / **unit**: truth (`⊤`), the proposition that always holds, with proof `unit`. Also called the *terminal type*.
+- **Unit** / **unit**: truth, the proposition that always holds, with proof `unit`. Also called the *terminal type*.
 - **identity type** (`x = y`): the type of proofs that `x` equals `y`; its one constructor is `refl`. Also called the *path type*; a proof is a *path*.
 - **path induction** (`ind-path`): to prove a statement about a path `p : x = y`, it is enough to prove the case where `p` is `refl`. Also called the *J rule*. The **motive** is that statement, as it depends on the endpoint and the path.
