@@ -1,6 +1,6 @@
 ---
 id: s-comb
-title: The S combinator (★)
+title: The S combinator
 statement: A → C
 hints:
 - text: 'Introduce the input `x`. Both `f` and `g` will use it.'

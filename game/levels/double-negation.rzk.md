@@ -1,6 +1,6 @@
 ---
 id: double-negation
-title: Double-negation introduction (★)
+title: Double-negation introduction
 statement: '(a : A) → neg (neg A)'
 hints:
 - text: 'Introduce `a`, then a proof `f` of `neg A`. The goal is `Void`.'

@@ -1,6 +1,6 @@
 ---
 id: right-unit
-title: Paths can compute (★)
+title: Paths can compute
 statement: 'concat A x y y p refl = p'
 hints:
 - text: 'What is `concat A x y y p refl`? Concatenation was defined by inducting on its second path, and here that path is already `refl`.'

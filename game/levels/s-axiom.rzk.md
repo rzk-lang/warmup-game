@@ -1,6 +1,6 @@
 ---
 id: s-axiom
-title: The S axiom (★)
+title: The S axiom
 statement: '(f : A → B → C) → (g : A → B) → (a : A) → C'
 hints:
 - text: 'Introduce `f`, `g`, and `a`. The goal becomes `C`.'
