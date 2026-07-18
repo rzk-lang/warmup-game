@@ -92,6 +92,41 @@ chapters:
         file: levels/aoc-intro.md
     - puzzle:
         file: levels/aoc.rzk.md
+  - id: coproducts
+    title: Coproducts
+    items:
+    - prose:
+        file: levels/coproducts-intro.md
+    - puzzle:
+        file: levels/rec-void.rzk.md
+    - puzzle:
+        file: levels/rec-coprod.rzk.md
+    - puzzle:
+        file: levels/coprod-swap.rzk.md
+    - prose:
+        file: levels/coproducts-summary.md
+  - id: booleans
+    title: Booleans
+    items:
+    - prose:
+        file: levels/booleans-intro.md
+    - puzzle:
+        file: levels/rec-bool.rzk.md
+    - puzzle:
+        file: levels/not.rzk.md
+    - prose:
+        file: levels/booleans-summary.md
+  - id: naturals
+    title: Natural numbers
+    items:
+    - prose:
+        file: levels/naturals-intro.md
+    - puzzle:
+        file: levels/rec-nat.rzk.md
+    - puzzle:
+        file: levels/double-nat.rzk.md
+    - prose:
+        file: levels/naturals-summary.md
 - title: Propositions as types
   sections:
   - id: logic
