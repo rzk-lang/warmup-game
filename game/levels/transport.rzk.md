@@ -10,7 +10,7 @@ hints:
 - text: 'The motive is `\ w _ → B w` and the base case is `b`: write `ind-path A x (\ w _ → B w) b y p`.'
 ---
 
-Equal points have interchangeable fibers. Given `p : x = y` and a value `b : B x`, produce a value of `B y`. Induct on `p`.
+A **type family** `B : A → U` assigns a type `B x` to each point `x` of `A`. When `x = y`, a value of `B x` can be carried over to a value of `B y`. Given `p : x = y` and `b : B x`, do the carrying. Induct on `p`.
 
 Build it.
 
@@ -39,4 +39,4 @@ Build it.
 
 ## Conclusion
 
-Transport carries a value along a path between its indices. It is the machinery behind substituting equals for equals.
+Transport moves a value along a path, from the type `B x` at one end to `B y` at the other. It is how you substitute equals for equals.

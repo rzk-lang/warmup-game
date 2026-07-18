@@ -29,4 +29,4 @@ Build it.
 
 ## Conclusion
 
-`Unit` is truth: always inhabited by `unit`, whatever else is in play. A proof of `A → ⊤` simply discards its input.
+`Unit` is truth: it always holds, with the single proof `unit`, whatever else is in play. A proof of `A → ⊤` simply discards its input.
