@@ -1,9 +1,9 @@
 ---
 id: weakening
 title: Weakening
-statement: '(a : A) → (b : B) → A'
+statement: 'A → B → A'
 hints:
-- text: 'Introduce both arguments `a` and `b`. The goal becomes `A`.'
+- text: 'Introduce the two arguments; call them `a` and `b`. The goal becomes `A`.'
 - text: 'Return the proof you already have, ignoring `b`: write `\ a b → a`.'
 ---
 
@@ -17,13 +17,13 @@ Build it.
 
 ```rzk template
 #def weakening (A B : U)
-  : (a : A) → (b : B) → A
+  : A → B → A
   := ?
 ```
 
 ```rzk solution
 #def weakening (A B : U)
-  : (a : A) → (b : B) → A
+  : A → B → A
   := \ a b → a
 ```
 

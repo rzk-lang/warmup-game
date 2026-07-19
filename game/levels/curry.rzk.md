@@ -1,9 +1,9 @@
 ---
 id: curry
 title: Currying
-statement: '(a : A) → (b : B) → C'
+statement: 'A → B → C'
 hints:
-- text: 'Introduce both arguments `a` and `b`. The goal becomes `C`.'
+- text: 'Introduce the two arguments; call them `a` and `b`. The goal becomes `C`.'
 - text: 'Now `f` wants a single pair. Build it from `a` and `b`: write `f (a , b)`.'
 ---
 
@@ -20,13 +20,13 @@ Build it.
 
 ```rzk template
 #def curry (A B C : U) (f : prod A B → C)
-  : (a : A) → (b : B) → C
+  : A → B → C
   := ?
 ```
 
 ```rzk solution
 #def curry (A B C : U) (f : prod A B → C)
-  : (a : A) → (b : B) → C
+  : A → B → C
   := \ a b → f (a , b)
 ```
 

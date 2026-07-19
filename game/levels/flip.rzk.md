@@ -1,7 +1,7 @@
 ---
 id: flip
 title: Swapping arguments
-statement: '(b : B) → (a : A) → C'
+statement: 'B → A → C'
 hints:
 - text: 'Introduce both arguments: tap the introduction move twice, or type `\ b a → ?`. That gives `b : B` and `a : A`.'
 - text: 'Apply `f` in its own order, an `A` then a `B`: `f a b`.'
@@ -17,13 +17,13 @@ Build it.
 
 ```rzk template
 #def flip (A B C : U) (f : A → B → C)
-  : (b : B) → (a : A) → C
+  : B → A → C
   := ?
 ```
 
 ```rzk solution
 #def flip (A B C : U) (f : A → B → C)
-  : (b : B) → (a : A) → C
+  : B → A → C
   := \ b a → f a b
 ```
 

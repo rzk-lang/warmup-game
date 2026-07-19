@@ -1,9 +1,9 @@
 ---
 id: uncurry
 title: Uncurrying
-statement: '(p : prod A B) → C'
+statement: 'prod A B → C'
 hints:
-- text: 'Introduce the pair `p`. The goal becomes `C`.'
+- text: 'Introduce the pair; call it `p`. The goal becomes `C`.'
 - text: 'Feed the two components of `p` to `f` one at a time: write `f (first p) (second p)`.'
 ---
 
@@ -20,13 +20,13 @@ Build it.
 
 ```rzk template
 #def uncurry (A B C : U) (f : A → B → C)
-  : (p : prod A B) → C
+  : prod A B → C
   := ?
 ```
 
 ```rzk solution
 #def uncurry (A B C : U) (f : A → B → C)
-  : (p : prod A B) → C
+  : prod A B → C
   := \ p → f (first p) (second p)
 ```
 

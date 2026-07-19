@@ -1,9 +1,9 @@
 ---
 id: undistribute
 title: Undistributing
-statement: '(p : prod (A → B) (A → C)) → (a : A) → prod B C'
+statement: 'prod (A → B) (A → C) → A → prod B C'
 hints:
-- text: 'Introduce the pair `p` and the argument `a`. The goal becomes a pair.'
+- text: 'Introduce the pair and the argument; call them `p` and `a`. The goal becomes a pair.'
 - text: 'Apply each component of `p` to `a`: write `(first p a , second p a)`.'
 ---
 
@@ -20,13 +20,13 @@ Build it.
 
 ```rzk template
 #def undistribute (A B C : U)
-  : (p : prod (A → B) (A → C)) → (a : A) → prod B C
+  : prod (A → B) (A → C) → A → prod B C
   := ?
 ```
 
 ```rzk solution
 #def undistribute (A B C : U)
-  : (p : prod (A → B) (A → C)) → (a : A) → prod B C
+  : prod (A → B) (A → C) → A → prod B C
   := \ p a → (first p a , second p a)
 ```
 

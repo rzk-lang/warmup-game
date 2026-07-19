@@ -1,9 +1,9 @@
 ---
 id: s-axiom
 title: The S axiom
-statement: '(f : A → B → C) → (g : A → B) → (a : A) → C'
+statement: '(A → B → C) → (A → B) → A → C'
 hints:
-- text: 'Introduce `f`, `g`, and `a`. The goal becomes `C`.'
+- text: 'Introduce the three arguments; call them `f`, `g`, and `a`. The goal becomes `C`.'
 - text: 'Feed `a` to both `f` and `g`, then combine: write `f a (g a)`.'
 ---
 
@@ -17,13 +17,13 @@ Build it.
 
 ```rzk template
 #def s-axiom (A B C : U)
-  : (f : A → B → C) → (g : A → B) → (a : A) → C
+  : (A → B → C) → (A → B) → A → C
   := ?
 ```
 
 ```rzk solution
 #def s-axiom (A B C : U)
-  : (f : A → B → C) → (g : A → B) → (a : A) → C
+  : (A → B → C) → (A → B) → A → C
   := \ f g a → f a (g a)
 ```
 
