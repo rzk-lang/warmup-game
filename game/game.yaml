@@ -139,17 +139,30 @@ chapters:
     - puzzle:
         file: levels/modus-ponens.rzk.md
     - puzzle:
+        file: levels/s-axiom.rzk.md
+        role: extra
+  - id: negation
+    title: Negation and disjunction
+    items:
+    - prose:
+        file: levels/negation-intro.md
+    - puzzle:
+        file: levels/double-negation.rzk.md
+    - puzzle:
+        file: levels/neg-coprod.rzk.md
+    - puzzle:
+        file: levels/neg-prod.rzk.md
+  - id: quantifiers
+    title: Quantifiers
+    items:
+    - prose:
+        file: levels/quantifiers-intro.md
+    - puzzle:
         file: levels/distribute.rzk.md
     - puzzle:
         file: levels/undistribute.rzk.md
     - puzzle:
-        file: levels/s-axiom.rzk.md
-        role: extra
-    - prose:
-        file: levels/negation-aside.md
-    - puzzle:
-        file: levels/double-negation.rzk.md
-        role: extra
+        file: levels/forall-prod.rzk.md
     - prose:
         file: levels/logic-summary.md
 - title: Identity types
