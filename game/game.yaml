@@ -241,3 +241,21 @@ chapters:
         file: levels/is-set-void.rzk.md
     - prose:
         file: levels/hott-summary.md
+- title: A taste of directed types
+  sections:
+  - id: directed
+    title: The directed interval
+    items:
+    - prose:
+        file: levels/directed-intro.md
+    - puzzle:
+        file: levels/id-morphism.rzk.md
+  - id: triangles
+    title: Triangles
+    items:
+    - prose:
+        file: levels/triangles-intro.md
+    - puzzle:
+        file: levels/const-triangle.rzk.md
+    - prose:
+        file: levels/directed-summary.md

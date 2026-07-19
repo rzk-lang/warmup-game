@@ -64,3 +64,8 @@ Language. Each entry notes the common alternative names you may meet elsewhere.
 - **contractible** (`is-contr A`): `A` has a center point to which every point is equal.
 - **proposition** (`is-prop A`): any two points of `A` are equal. Also called a *mere proposition*.
 - **set** (`is-set A`): any two proofs of one equality in `A` are equal.
+- **homotopy** (`homotopy A B f g`): a pointwise equality of functions, `(x : A) → f x = g x`.
+- **equivalence** (`is-equiv`, `Equiv A B`): a function with a two-sided inverse, and two types related by one.
+- **univalence**: the axiom that equality of types is the same as equivalence of types.
+- **morphism** (`hom A x y`): a *directed* path from `x` to `y`, a map out of the interval `Δ¹`. Also called an *arrow*.
+- **directed interval** (`2`): the basic cube of directed type theory, with endpoints `0₂` and `1₂`; the whole interval as a shape is `Δ¹`.
