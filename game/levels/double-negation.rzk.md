@@ -15,7 +15,7 @@ Build it.
 
 ```rzk prelude
 #lang rzk-1
-#postulate Void : U
+#data Void
 #def neg (A : U)
   : U
   := A → Void

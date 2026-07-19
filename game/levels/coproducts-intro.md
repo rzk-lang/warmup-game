@@ -4,7 +4,7 @@ title: Coproducts
 role: bridge-in
 ---
 
-A **coproduct** `coprod A B` is a disjoint union: a value is either an `A` or a `B`, tagged by which side it came from. Its nullary companion is the **empty type** `Void`, with no values at all. Read as logic, a coproduct is *disjunction* ("or") and `Void` is *falsity*.
+A **coproduct** `coprod A B` is a disjoint union: a value is either an `A` or a `B`, tagged by which side it came from. Its nullary companion is the **empty type** `Void`, with no values at all. Read as logic, a coproduct is *disjunction* ("or") and `Void` is *falsity*; the Propositions as types chapter develops that reading, once all the type formers are in hand.
 
 In the Type formers section you wrote the eliminators for products by hand. For a new type, the **`#data` command** declares it and generates its eliminators for you. The empty type has no constructors, and the coproduct has two:
 
