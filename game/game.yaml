@@ -188,6 +188,15 @@ chapters:
     - puzzle:
         file: levels/concat-assoc.rzk.md
         role: extra
+    - puzzle:
+        file: levels/left-unit.rzk.md
+        role: extra
+    - puzzle:
+        file: levels/right-inv.rzk.md
+        role: extra
+    - puzzle:
+        file: levels/left-inv.rzk.md
+        role: extra
   - id: fibers
     title: Σ-types with identity
     items:
@@ -195,6 +204,9 @@ chapters:
         file: levels/fiber-intro.md
     - puzzle:
         file: levels/fiber-point.rzk.md
+    - puzzle:
+        file: levels/pair-path.rzk.md
+        role: extra
     - prose:
         file: levels/paths-summary.md
 - title: Equivalences and univalence
@@ -239,6 +251,9 @@ chapters:
         file: levels/inhabited-prop-is-contr.rzk.md
     - puzzle:
         file: levels/is-set-void.rzk.md
+    - puzzle:
+        file: levels/is-set-unit.rzk.md
+        role: extra
     - prose:
         file: levels/hott-summary.md
 - title: A taste of directed types
