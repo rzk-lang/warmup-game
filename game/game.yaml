@@ -237,5 +237,7 @@ chapters:
         file: levels/contr-is-prop.rzk.md
     - puzzle:
         file: levels/inhabited-prop-is-contr.rzk.md
+    - puzzle:
+        file: levels/is-set-void.rzk.md
     - prose:
         file: levels/hott-summary.md
