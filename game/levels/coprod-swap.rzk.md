@@ -9,8 +9,6 @@ hints:
 
 A disjoint union does not care about the order of its two sides. Turn a `coprod A B` into a `coprod B A` by swapping the tags.
 
-This is the first level you finish by typing. The Moves panel offers only the constructors `inl` and `inr`, which build a coproduct but cannot inspect one. To swap, you must case-analyse the input, so write the eliminator `rec-coprod` out by hand, following the hints.
-
 Build it.
 
 ```rzk prelude
