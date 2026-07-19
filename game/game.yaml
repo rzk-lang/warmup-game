@@ -197,6 +197,31 @@ chapters:
         file: levels/fiber-point.rzk.md
     - prose:
         file: levels/paths-summary.md
+- title: Equivalences and univalence
+  sections:
+  - id: equivalences
+    title: Homotopy and equivalence
+    items:
+    - prose:
+        file: levels/equivalences-intro.md
+    - puzzle:
+        file: levels/homotopy-refl.rzk.md
+    - puzzle:
+        file: levels/is-equiv-identity.rzk.md
+    - puzzle:
+        file: levels/equiv-identity.rzk.md
+  - id: univalence
+    title: Univalence
+    items:
+    - prose:
+        file: levels/univalence-intro.md
+    - puzzle:
+        file: levels/idtoequiv.rzk.md
+    - puzzle:
+        file: levels/eq-from-equiv.rzk.md
+        role: extra
+    - prose:
+        file: levels/equivalences-summary.md
 - title: Sets and logic
   sections:
   - id: hlevels
