@@ -185,6 +185,16 @@ chapters:
     - puzzle:
         file: levels/right-unit.rzk.md
         role: extra
+    - puzzle:
+        file: levels/concat-assoc.rzk.md
+        role: extra
+  - id: fibers
+    title: Σ-types with identity
+    items:
+    - prose:
+        file: levels/fiber-intro.md
+    - puzzle:
+        file: levels/fiber-point.rzk.md
     - prose:
         file: levels/paths-summary.md
 - title: Sets and logic
