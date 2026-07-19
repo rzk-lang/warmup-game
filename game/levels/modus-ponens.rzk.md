@@ -1,9 +1,9 @@
 ---
 id: modus-ponens
 title: Modus ponens
-statement: '(p : prod A (A → B)) → B'
+statement: 'prod A (A → B) → B'
 hints:
-- text: 'Introduce the pair `p`. Its first component proves `A`, its second proves `A → B`.'
+- text: 'Introduce the pair of premises; call it `p`. Its first component proves `A`, its second proves `A → B`.'
 - text: 'Apply the implication to the proof of `A`: write `second p (first p)`.'
 ---
 
@@ -20,13 +20,13 @@ Build it.
 
 ```rzk template
 #def modus-ponens (A B : U)
-  : (p : prod A (A → B)) → B
+  : prod A (A → B) → B
   := ?
 ```
 
 ```rzk solution
 #def modus-ponens (A B : U)
-  : (p : prod A (A → B)) → B
+  : prod A (A → B) → B
   := \ p → second p (first p)
 ```
 
