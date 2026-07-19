@@ -8,7 +8,7 @@ Welcome to the Rzk warm-up. This game teaches Rzk one small step at a time, and 
 
 Every puzzle hands you an unfinished piece of Rzk code with a gap in it, written `?`. That gap is a **hole**. Your job is to fill every hole so the code is complete.
 
-Click a hole and the panel beside the editor shows two things:
+The first hole is **focused** automatically, and the panel beside the editor shows two things:
 
 - its **goal**: what your answer has to be (its type), and
 - its **context**: everything you already have to work with right there, the values and assumptions in scope.
@@ -47,15 +47,15 @@ Playing:
 
 Language. Each entry notes the common alternative names you may meet elsewhere.
 
-- **type**: a classification of values; `A : U` reads "`A` is a type". Pictured as a *space* in homotopy type theory.
+- **type**: a classification of values; `A : U` reads "`A` is a type". In homotopy type theory its values behave like the points of a space.
 - **universe** (`U`): the type whose values are themselves types.
-- **value**: an expression, such as the one that fills a hole. Also called a *term*, an *element*, or (for a type seen as a space) a *point*.
+- **value**: something of a given type, such as the one that fills a hole. Also called an *element* or *inhabitant* of the type, or (for a type seen as a space) a *point*.
 - **function** (`A → B`): sends an `A` to a `B`; written `\ x → …` and applied by juxtaposition, `f x`. Also called a *map*.
 - **λ-abstraction** (`\ x → …`): a function written inline; `\` stands for the Greek λ. Also called an *anonymous function*.
 - **dependent function** (`(x : A) → B x`): a function whose result type depends on the argument. Also called a *Π-type* (pi-type); one such function is a *section* of the family `B`.
 - **product** (`prod A B`): the type of pairs of an `A` and a `B`; here a shorthand for `Σ (a : A) , B`. As a proposition it is *conjunction*.
 - **pair** (`(a , b)`) and **projections** (`first`, `second`): build a pair and take it apart.
-- **Σ-type** (`Σ (x : A) , B x`): a dependent pair, where the second type may depend on the first value. Also called a *dependent pair type* or *dependent sum*.
+- **Σ-type** (`Σ (x : A) , B x`): the type of **dependent pairs**, whose second component's type may depend on the first value. Also called a *dependent pair type* or *dependent sum*.
 - **type family** (`B : A → U`): a type `B x` for each point `x`. Also called a *fibration*; each `B x` is a *fiber*.
 - **proposition as type** (Curry–Howard): a proposition is a type, and a proof is a value of that type.
 - **Unit** / **unit**: truth, the proposition that always holds, with proof `unit`. Also called the *terminal type*.
