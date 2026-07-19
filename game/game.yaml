@@ -98,9 +98,7 @@ chapters:
     - prose:
         file: levels/coproducts-intro.md
     - puzzle:
-        file: levels/rec-void.rzk.md
-    - puzzle:
-        file: levels/rec-coprod.rzk.md
+        file: levels/ex-falso.rzk.md
     - puzzle:
         file: levels/coprod-swap.rzk.md
     - prose:
@@ -111,9 +109,9 @@ chapters:
     - prose:
         file: levels/booleans-intro.md
     - puzzle:
-        file: levels/rec-bool.rzk.md
-    - puzzle:
         file: levels/not.rzk.md
+    - puzzle:
+        file: levels/and.rzk.md
     - prose:
         file: levels/booleans-summary.md
   - id: naturals
@@ -122,9 +120,9 @@ chapters:
     - prose:
         file: levels/naturals-intro.md
     - puzzle:
-        file: levels/rec-nat.rzk.md
-    - puzzle:
         file: levels/double-nat.rzk.md
+    - puzzle:
+        file: levels/plus.rzk.md
     - prose:
         file: levels/naturals-summary.md
 - title: Propositions as types

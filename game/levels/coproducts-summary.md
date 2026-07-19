@@ -4,4 +4,4 @@ title: What you built
 role: summary
 ---
 
-You met the first postulated types: the empty type `Void` and the coproduct `coprod A B`, falsity and disjunction read as types. Both come with an induction principle for case analysis, and recursion falls out as the constant-motive case. Once Rzk v0.11 lands user-defined inductive types, these become ordinary definitions.
+You met your first inductive types, declared with `#data`: the empty type `Void` and the coproduct `coprod A B`, falsity and disjunction read as types. Declaring a type generates its induction and recursion principles, so eliminating one is just calling `rec-…` with a handler per constructor.

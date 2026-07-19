@@ -4,6 +4,6 @@ title: What you built
 role: summary
 ---
 
-The naturals are `zero` and `succ`, and `ind-ℕ` is mathematical induction. Recursion builds functions like doubling from a base and a step. From Rzk v0.11 on, `ℕ` is a real inductive type, and its computation rules hold on the nose.
+The naturals are `zero` and `succ`, and `ind-ℕ` is mathematical induction with a hypothesis for the predecessor. Recursion builds functions like doubling and addition from a base and a step, and they compute definitionally.
 
 That completes the dependent-types toolkit. Next: logic, read as types.

@@ -4,10 +4,14 @@ title: Natural numbers
 role: bridge-in
 ---
 
-The **natural numbers** `ℕ` are built from `zero` and the successor `succ`. Their induction principle `ind-ℕ` is genuine mathematical induction: to prove something for every `n`, prove it for `zero` and show it passes from `n` to `succ n`.
+The **natural numbers** `ℕ` are a *recursive* inductive type: `zero` is a number, and `succ` takes a number to its successor.
 
-Like the previous two, `ℕ` is **postulated** here, since Rzk does not yet have user-defined inductive types. It is planned as a real inductive type in the upcoming **Rzk v0.11**.
+```
+#data ℕ := zero | succ (n : ℕ)
+```
 
-*By the end of this section you will be able to:* derive recursion for `ℕ` and define doubling.
+Because `succ` stores a `ℕ`, the generated `ind-ℕ` is genuine mathematical induction: it hands the step an *induction hypothesis* for the predecessor. Its non-dependent form `rec-ℕ` builds a function from a base value and a step.
+
+*By the end of this section you will be able to:* double a number and add two numbers, both by recursion.
 
 *Further reading:* the [HoTT Book](https://homotopytypetheory.org/book/), §1.9.
