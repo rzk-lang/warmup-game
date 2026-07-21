@@ -3,11 +3,11 @@ id: not
 title: Negation
 statement: Bool → Bool
 hints:
-- text: '`rec-Bool` takes the result type, then the value for `false`, then the value for `true`.'
-- text: 'Negation sends `false` to `true` and `true` to `false`: write `rec-Bool Bool true false`.'
+- text: '`match b` takes one branch per constructor: a value for `false` and a value for `true`.'
+- text: 'The `false` branch gives `true`, the `true` branch gives `false`; put them in `match b (false ⇒ … | true ⇒ …)` under a `\ b →`.'
 ---
 
-Negation swaps `true` and `false`. Build it with the generated `rec-Bool`.
+Negation swaps `true` and `false`. Take a boolean apart with `match`.
 
 Build it.
 
@@ -25,9 +25,11 @@ Build it.
 ```rzk solution
 #def not
   : Bool → Bool
-  := rec-Bool Bool true false
+  := \ b → match b
+       ( false ⇒ true
+       | true ⇒ false)
 ```
 
 ## Conclusion
 
-Negation returns the *other* value in each case. Because the computation rules of an inductive type are definitional, `not (not true)` already computes to `true`; proving `not (not b) = b` for every `b` follows by induction, once you have identity types.
+A `match` on a boolean gives one branch per constructor: the value at `false` and the value at `true`. Negation returns the *other* value in each case. Because the computation rules of an inductive type are definitional, `not (not true)` already computes to `true`; proving `not (not b) = b` for every `b` follows once you have identity types.

@@ -4,7 +4,7 @@ title: An inhabited proposition is contractible
 statement: is-contr A
 hints:
 - text: 'A value of `is-contr A` is a pair of a center and a proof that every point equals it.'
-- text: 'Take `a` as the center; the proposition `f` supplies every equality. Write `(a , \ x → f a x)`.'
+- text: 'Take `a` as the centre; the proposition `f` gives an equality `a = x` for each `x`, which is the contraction.'
 ---
 
 The near-converse of the previous level. A proposition that has at least one point is contractible. Given a proof `f` that `A` is a proposition and a point `a`, build a contraction centered at `a`.

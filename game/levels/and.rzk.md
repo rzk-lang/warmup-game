@@ -3,8 +3,8 @@ id: and
 title: Conjunction
 statement: Bool
 hints:
-- text: 'Case-analyse the first argument `a` with `rec-Bool`. If `a` is `false`, the answer is `false`; if `a` is `true`, the answer is `b`.'
-- text: 'The false-case is `false`, the true-case is `b`: write `rec-Bool Bool false b a`.'
+- text: 'Case-analyse the first argument `a` with `match`. If `a` is `false`, the answer is `false`; if `a` is `true`, the answer is `b`.'
+- text: 'Assemble the two cases as a single `match a (false ⇒ … | true ⇒ …)`, filling each branch from the first hint.'
 ---
 
 Conjunction: `and a b` is `true` exactly when both are. Case-analyse the first argument.
@@ -25,9 +25,11 @@ Build it.
 ```rzk solution
 #def and (a b : Bool)
   : Bool
-  := rec-Bool Bool false b a
+  := match a
+       ( false ⇒ false
+       | true ⇒ b)
 ```
 
 ## Conclusion
 
-Splitting on `a`: a `false` short-circuits to `false`, a `true` defers to `b`. The same pattern defines every boolean operation.
+Splitting on `a` with `match`: a `false` short-circuits to `false`, a `true` defers to `b`. The same pattern defines every boolean operation.

@@ -4,9 +4,9 @@ title: Coproducts
 role: bridge-in
 ---
 
-A **coproduct** `coprod A B` is a disjoint union: a value is either an `A` or a `B`, tagged by which side it came from. Its nullary companion is the **empty type** `Void`, with no values at all. Read as logic, a coproduct is *disjunction* ("or") and `Void` is *falsity*; the Propositions as types chapter develops that reading, once all the type formers are in hand.
+A **coproduct** `coprod A B` is a disjoint union: a value is either an `A` or a `B`, tagged by which side it came from. Its nullary companion is the **empty type** `Void`, with no values at all. Read as logic, a coproduct is *disjunction* ("or") and `Void` is *falsity*; the Propositions as types chapter develops that reading.
 
-In the Type formers section you wrote the eliminators for products by hand. For a new type, the **`#data` command** declares it and generates its eliminators for you. The empty type has no constructors, and the coproduct has two:
+The empty type has no constructors, and the coproduct has two:
 
 ```
 #data Void
@@ -16,8 +16,6 @@ In the Type formers section you wrote the eliminators for products by hand. For 
   |  inr (b : B)
 ```
 
-Each declaration generates the induction principle `ind-…` and its non-dependent version `rec-…`. A coproduct is built with `inl` (left) or `inr` (right), and taken apart by `rec-coprod`, which handles the two cases separately.
-
-*By the end of this section you will be able to:* eliminate the empty type, and swap the two sides of a coproduct.
+A coproduct is built with `inl` (left) or `inr` (right), and taken apart by `match`, with a branch for each side: `match z (inl a ⇒ … | inr b ⇒ …)`. `Void` has no constructors, so there is nothing to match on — you eliminate it with the generated `rec-Void` (or its dependent form `ind-Void`) instead, vacuously.
 
 *Further reading:* the [HoTT Book](https://homotopytypetheory.org/book/), §1.7.

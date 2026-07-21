@@ -7,7 +7,7 @@ inventory:
   synopsis: 'path induction: reduces a goal about a path to the refl case'
 hints:
 - text: 'Induct on `p` with `ind-path`. In the base case `y` becomes `x` and `p` becomes `refl`, so you need only a proof of `x = x`.'
-- text: 'The motive is `\ w _ → w = x` and the base case is `refl`: write `ind-path A x (\ w _ → w = x) refl y p`.'
+- text: 'The motive is `\ w _ → w = x` and the base case is `refl`. Assemble these with `ind-path`, inducting on `p`.'
 ---
 
 If `x` equals `y`, then `y` equals `x`: equality is symmetric. Prove it by path induction, handling the case where the path is `refl`.

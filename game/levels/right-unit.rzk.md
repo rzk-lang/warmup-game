@@ -4,7 +4,7 @@ title: Paths can compute
 statement: 'concat A x y y p refl = p'
 hints:
 - text: 'What is `concat A x y y p refl`? Concatenation was defined by inducting on its second path, and here that path is already `refl`.'
-- text: 'So `concat A x y y p refl` reduces to `p` on the nose. The two sides are literally the same, so the proof is `refl`.'
+- text: 'So `concat A x y y p refl` reduces to `p` on the nose, making the two sides literally the same term — which reflexivity proves.'
 ---
 
 Some equations between paths hold *definitionally*, with no work at all. Because `concat` was defined by inducting on its second argument, feeding `refl` there makes it compute. Show that `concat A x y y p refl` equals `p`.

@@ -4,7 +4,7 @@ title: Composition
 statement: A → C
 hints:
 - text: 'Introduce the input `x`. The goal becomes `C`.'
-- text: 'You have no `C` at hand, but `g` makes one from a `B`, and `f` makes a `B` from `x`. Chain them: `g (f x)`.'
+- text: 'You have no `C` at hand, but `f` makes a `B` from `x`, and `g` makes a `C` from a `B`. After introducing `x`, chain the two.'
 ---
 
 Composition chains two functions: from `f : A → B` and `g : B → C`, build a function `A → C` that runs each input through `f` and then `g`.

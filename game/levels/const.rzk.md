@@ -4,7 +4,7 @@ title: The constant function
 statement: B → A
 hints:
 - text: 'Introduce the argument (the introduction move, or `\ ... → ?` by hand), even though you will not use it.'
-- text: 'The body ignores that argument and returns `x`. Write `\ _ → x`; the `_` discards the input.'
+- text: 'Introduce the argument, discard it with `_`, and return `x`.'
 ---
 
 A constant function ignores its input and always returns the same value. You are given `x : A`; produce a function that returns `x` no matter what it is fed.

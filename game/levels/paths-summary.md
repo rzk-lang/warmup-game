@@ -8,4 +8,4 @@ You now have the core operations on equality: `refl`, reversal, concatenation, t
 
 Beyond this lie the path-algebra laws, unit and associativity up to higher paths, and results like Eckmann–Hilton. They are all built from exactly these operations.
 
-Next: the last step, a first taste of the directed types that Rzk was built for.
+Next: equivalences, univalence, and the homotopy view of types.

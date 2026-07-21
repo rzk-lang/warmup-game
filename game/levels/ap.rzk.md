@@ -7,7 +7,7 @@ inventory:
   synopsis: 'path induction: reduces a goal about a path to the refl case'
 hints:
 - text: 'A function respects equality. Induct on `p` with `ind-path`; the base case needs a proof of `f x = f x`.'
-- text: 'The motive is `\ w _ → f x = f w` and the base case is `refl`: write `ind-path A x (\ w _ → f x = f w) refl y p`.'
+- text: 'The motive is `\ w _ → f x = f w` and the base case is `refl`. Assemble these with `ind-path`, inducting on `p`.'
 ---
 
 A function respects equality. Given a path `p : x = y`, produce a path `f x = f y`. Induct on `p`.

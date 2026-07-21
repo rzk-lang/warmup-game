@@ -4,7 +4,7 @@ title: Uncurrying
 statement: 'prod A B → C'
 hints:
 - text: 'Introduce the pair; call it `p`. The goal becomes `C`.'
-- text: 'Feed the two components of `p` to `f` one at a time: write `f (first p) (second p)`.'
+- text: 'Feed the two projections of `p` to `f`, one argument at a time.'
 ---
 
 The reverse of currying. Given a two-argument function `f`, build the version that takes a single pair and passes its components along.

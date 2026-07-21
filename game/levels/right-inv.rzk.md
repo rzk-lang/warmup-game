@@ -1,10 +1,10 @@
 ---
 id: right-inv
-title: A path undoes its reversal (★)
+title: A path undoes its reversal
 statement: 'concat A x y x p (rev A x y p) = refl'
 hints:
 - text: 'Induct on `p`. In the base case `p` is `refl`, `rev refl` is `refl`, and `concat refl refl` computes to `refl`.'
-- text: 'Write `ind-path A x (\ w r → concat A x w x r (rev A x w r) = refl) refl y p`.'
+- text: 'The motive is `\ w r → concat A x w x r (rev A x w r) = refl` and the base case is `refl`. Assemble these with `ind-path`, inducting on `p`.'
 ---
 
 A path followed by its reversal returns to the start: `concat p (rev p) = refl`. Prove it by inducting on `p`.

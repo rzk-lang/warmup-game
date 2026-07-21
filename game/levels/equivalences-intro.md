@@ -20,6 +20,6 @@ is-equiv A B f := prod
 
 Two types are **equivalent**, `Equiv A B`, when some `f : A → B` is an equivalence.
 
-*By the end of this section you will be able to:* build the reflexive homotopy, show the identity function is an equivalence, and conclude every type is equivalent to itself.
+*By the end of this section you will be able to:* build the reflexive homotopy, show the identity function is an equivalence, conclude every type is equivalent to itself, and extract the inverse map of an equivalence — then, with univalence, turn a path between types into an equivalence and back.
 
 *Further reading:* the [HoTT Book](https://homotopytypetheory.org/book/), §2.4 and §4.

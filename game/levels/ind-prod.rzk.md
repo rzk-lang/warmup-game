@@ -4,7 +4,7 @@ title: The induction principle for products
 statement: '(z : prod A B) → C z'
 hints:
 - text: 'Pattern-match the pair: `\ (a , b) → ?`. The goal becomes `C (a , b)`.'
-- text: 'That is exactly what `f a b` provides: write `\ (a , b) → f a b`.'
+- text: 'After pattern-matching the pair, apply `f` to the two components `a` and `b`.'
 ---
 
 The **induction principle** is the dependent version of recursion: the result type `C z` may depend on the pair `z`. Given `f` that handles a literal pair `(a , b)`, define the dependent function.

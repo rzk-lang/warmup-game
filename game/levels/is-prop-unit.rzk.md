@@ -4,7 +4,7 @@ title: Unit is a proposition
 statement: is-prop Unit
 hints:
 - text: 'Introduce the two elements `x` and `y`. You need a proof of `x = y`.'
-- text: 'In Rzk both are definitionally `unit`, so the goal holds by `refl`: write `\ x y → refl`.'
+- text: 'Introduce `x` and `y`; both are definitionally `unit`, so `refl` proves `x = y`.'
 ---
 
 A **proposition** is a type in which any two elements are equal. `Unit` is the simplest example: it has essentially one element. Show it is a proposition.

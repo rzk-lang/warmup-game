@@ -7,7 +7,7 @@ inventory:
   synopsis: 'path induction: reduces a goal about a path to the refl case'
 hints:
 - text: 'A path `x = y` lets you carry a value from `B x` to `B y`. Induct on `p`; the base case asks for a `B x`, which is exactly `b`.'
-- text: 'The motive is `\ w _ → B w` and the base case is `b`: write `ind-path A x (\ w _ → B w) b y p`.'
+- text: 'The motive is `\ w _ → B w` and the base case is `b`. Assemble these with `ind-path`, inducting on `p`.'
 ---
 
 A **type family** `B : A → U` assigns a type `B x` to each point `x` of `A`. When `x = y`, a value of `B x` can be carried over to a value of `B y`. Given `p : x = y` and `b : B x`, do the carrying. Induct on `p`.

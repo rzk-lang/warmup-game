@@ -4,7 +4,7 @@ title: Swapping arguments
 statement: 'B → A → C'
 hints:
 - text: 'Introduce both arguments: tap the introduction move twice, or type `\ b a → ?`. That gives `b : B` and `a : A`.'
-- text: 'Apply `f` in its own order, an `A` then a `B`: `f a b`.'
+- text: 'After introducing `b` then `a`, apply `f` in its own order: the `A`, then the `B`.'
 ---
 
 A two-argument function can take its arguments in either order. Given `f` that wants an `A` and then a `B`, build the version that wants a `B` and then an `A`.

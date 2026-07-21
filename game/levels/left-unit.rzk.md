@@ -1,10 +1,10 @@
 ---
 id: left-unit
-title: The left unit law (★)
+title: The left unit law
 statement: 'concat A x x y refl p = p'
 hints:
 - text: 'Induct on `p`. Concatenation was defined by inducting on its *second* path, so `concat p refl` computes but `concat refl p` needs its own induction.'
-- text: 'In the base case `p` is `refl` and both sides are `refl`: write `ind-path A x (\ w r → concat A x x w refl r = r) refl y p`.'
+- text: 'The motive is `\ w r → concat A x x w refl r = r` and, since both sides are `refl` in the base case, the base case is `refl`. Assemble these with `ind-path`, inducting on `p`.'
 ---
 
 Prepending the trivial path does nothing: `concat refl p = p`. Prove the left unit law by inducting on `p`. (You proved the right unit law earlier, where it held by `refl` alone.)

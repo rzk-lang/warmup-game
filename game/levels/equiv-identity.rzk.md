@@ -9,7 +9,7 @@ inventory:
   synopsis: the proof that the identity is an equivalence
 hints:
 - text: 'An `Equiv A A` is a pair: the function, and a proof it is an equivalence.'
-- text: 'Write `(identity A , is-equiv-identity A)`.'
+- text: 'Pair the function `identity A` with the proof `is-equiv-identity A`.'
 ---
 
 Every type is equivalent to itself. Package the identity function with the proof that it is an equivalence.

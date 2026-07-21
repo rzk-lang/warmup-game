@@ -4,7 +4,7 @@ title: From falsity, anything
 statement: Void → A
 hints:
 - text: 'The generated `rec-Void` eliminates the empty type into any type.'
-- text: 'Apply it at `A`: write `rec-Void A`.'
+- text: 'Apply `rec-Void` at the target type `A`.'
 ---
 
 The empty type `Void` has no values, so from one you may conclude anything. The `#data Void` declaration generated `rec-Void` for exactly this. Use it.

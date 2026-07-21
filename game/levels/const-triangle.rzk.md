@@ -4,7 +4,7 @@ title: The constant triangle
 statement: hom2 A x x x (id-hom A x) (id-hom A x) (id-hom A x)
 hints:
 - text: 'The goal is a map out of `Δ²`. Introduce the two coordinates, then return a point of `A`.'
-- text: 'Stay at `x` everywhere: write `\ (t , s) → x`.'
+- text: 'Introduce the two coordinates, ignore them, and return `x`.'
 ---
 
 The simplest triangle is the constant one at `x`, whose three edges are all the identity morphism. Fill it with the constant map: two coordinates now, but the value never moves.

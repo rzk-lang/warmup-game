@@ -4,7 +4,7 @@ title: De Morgan, one direction
 statement: neg (coprod A B) → prod (neg A) (neg B)
 hints:
 - text: 'A refutation of `coprod A B` refutes each side. Build the pair of the two refutations.'
-- text: 'Feed each injection to `k`: write `\ k → (\ a → k (inl A B a) , \ b → k (inr A B b))`.'
+- text: 'Introduce `k`, then return a pair: on each side, inject into the coproduct (`inl`/`inr`) and feed the result to `k`.'
 ---
 
 If a proof of `A ∨ B` is impossible, then neither side can hold on its own. From a refutation of the coproduct, build the pair of refutations of `A` and of `B`.

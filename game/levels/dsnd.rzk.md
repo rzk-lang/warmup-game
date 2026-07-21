@@ -4,7 +4,7 @@ title: The dependent projection
 statement: B (first p)
 hints:
 - text: 'The same `second` projection works on a Σ-value.'
-- text: 'Apply it to `p`: write `second p`. Its type is `B (first p)`.'
+- text: 'Apply `second` to `p`; its type is `B (first p)`.'
 ---
 
 Projections work on dependent pairs too. Taking the second component of `p` gives a value whose type mentions the first component. That is the whole point of a Σ-type.

@@ -4,7 +4,7 @@ title: A point of a fiber
 statement: preimage A B f (f a)
 hints:
 - text: 'A point of the fiber is a pair: an input, and a proof that `f` sends it where you want.'
-- text: '`a` maps to `f a` by `refl`: write `(a , refl)`.'
+- text: 'Pair the input `a` with the proof `refl` that `f a` equals `f a`.'
 ---
 
 Every input lands in the fiber over its own image. Given `a : A`, exhibit a point of the fiber of `f` over `f a`.

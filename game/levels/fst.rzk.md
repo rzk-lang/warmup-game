@@ -4,7 +4,7 @@ title: Taking a pair apart
 statement: A
 hints:
 - text: 'The `first` projection reads off the first component of a pair.'
-- text: 'Apply it to `p`: write `first p`.'
+- text: 'Apply `first` to `p`.'
 ---
 
 A pair can be taken apart. The `first` projection reads off the first component, and `second` reads off the second. Use one of them to recover the `A` inside `p`.

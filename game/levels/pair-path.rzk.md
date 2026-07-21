@@ -1,10 +1,10 @@
 ---
 id: pair-path
-title: Paths between pairs (★)
+title: Paths between pairs
 statement: 'prod (first x = first y) (second x = second y)'
 hints:
 - text: 'The projections `first` and `second` are functions, so `ap` carries a path of pairs to a path in each component.'
-- text: 'Apply `ap` to each projection and pair the results: write `(ap (prod A B) A (\ z → first z) x y p , ap (prod A B) B (\ z → second z) x y p)`.'
+- text: 'Apply `ap` to the first projection and to the second, and pair the two resulting paths.'
 ---
 
 A path between pairs gives a path between each pair of components. From `p : x = y` in `prod A B`, extract the two component paths by applying `ap` to the projections.

@@ -4,7 +4,7 @@ title: Distributing over "and"
 statement: '(A → prod B C) → prod (A → B) (A → C)'
 hints:
 - text: 'Introduce the argument; call it `f`. Then build a pair `(? , ?)` of two functions.'
-- text: 'Each side takes an `a` and projects `f a`: write `(\ a → first (f a) , \ a → second (f a))`.'
+- text: 'Return a pair of functions; each takes an `a` and projects the matching component of `f a`.'
 ---
 
 A function into a conjunction splits into two functions. Given `f` that proves `B` and `C` together from any `A`, build the pair of `A → B` and `A → C`.

@@ -4,7 +4,7 @@ title: Concatenation is associative
 statement: 'concat A x z w (concat A x y z p q) r = concat A x y w p (concat A y z w q r)'
 hints:
 - text: 'Induct on the last path `r`. In the base case `r` is `refl`, and both sides compute to `concat A x y z p q`.'
-- text: 'The motive repeats the goal with the endpoint `e` and path `s` varying, and the base case is `refl`: write `ind-path A z (\ e s → concat A x z e (concat A x y z p q) s = concat A x y e p (concat A y z e q s)) refl w r`.'
+- text: 'The motive repeats the goal with the endpoint `e` and path `s` varying — `\ e s → concat A x z e (concat A x y z p q) s = concat A x y e p (concat A y z e q s)` — and the base case is `refl`. Assemble these with `ind-path`, inducting on `r`.'
 ---
 
 Three paths in a row compose to one, and it does not matter how you group them. Prove that concatenation is associative, by inducting on the last path.

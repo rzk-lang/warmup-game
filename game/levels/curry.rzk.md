@@ -4,7 +4,7 @@ title: Currying
 statement: 'A → B → C'
 hints:
 - text: 'Introduce the two arguments; call them `a` and `b`. The goal becomes `C`.'
-- text: 'Now `f` wants a single pair. Build it from `a` and `b`: write `f (a , b)`.'
+- text: 'Now `f` wants a single pair. After introducing `a` and `b`, hand `f` the pair built from them.'
 ---
 
 A function on pairs and a two-argument function carry the same information. Given `f` that takes one pair, build the version that takes the two components separately.

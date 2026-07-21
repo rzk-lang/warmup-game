@@ -3,11 +3,11 @@ id: double-nat
 title: Doubling
 statement: ℕ → ℕ
 hints:
-- text: 'Use `rec-ℕ`: the base is `zero`, and the step turns the running result into two more.'
-- text: 'Add two at each step: write `rec-ℕ ℕ zero (\ _ m → succ (succ m))`.'
+- text: 'Use `match`: the `zero` branch is `zero`, and the `succ` branch turns the induction hypothesis `ih` into two more.'
+- text: 'The `zero` branch is `zero`; the `succ k ih` branch adds two to the hypothesis `ih`. Fill these into `match n (…)` under a `\ n →`.'
 ---
 
-Double a number: send `zero` to `zero`, and add two at each successor step. Build it with the generated `rec-ℕ`.
+Double a number: send `zero` to `zero`, and add two at each successor step. Build it with `match`.
 
 Build it.
 
@@ -25,9 +25,11 @@ Build it.
 ```rzk solution
 #def double-ℕ
   : ℕ → ℕ
-  := rec-ℕ ℕ zero (\ _ m → succ (succ m))
+  := \ n → match n
+       ( zero ⇒ zero
+       | succ k ih ⇒ succ (succ ih))
 ```
 
 ## Conclusion
 
-Recursion turns a base and a step into a function on `ℕ`. Because computation is definitional, `double-ℕ` applied to a numeral computes to its double on the nose.
+Recursion turns a base branch and a step branch into a function on `ℕ`. Because computation is definitional, `double-ℕ` applied to a numeral computes to its double on the nose.

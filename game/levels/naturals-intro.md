@@ -10,8 +10,14 @@ The **natural numbers** `ℕ` are a *recursive* inductive type: `zero` is a numb
 #data ℕ := zero | succ (n : ℕ)
 ```
 
-Because `succ` stores a `ℕ`, the generated `ind-ℕ` is genuine mathematical induction: it hands the step an *induction hypothesis* for the predecessor. Its non-dependent form `rec-ℕ` builds a function from a base value and a step.
+You take a number apart with `match`, as before — but now one constructor is *recursive*. Because `succ` stores a `ℕ`, its branch binds not only the predecessor `k` but an **induction hypothesis** `ih`: the result of the recursion on `k`.
 
-*By the end of this section you will be able to:* double a number and add two numbers, both by recursion.
+```
+match n
+  ( zero ⇒ …
+  | succ k ih ⇒ …)
+```
+
+That hypothesis is what makes a `match` on `ℕ` genuine mathematical induction. Under the hood, `#data ℕ` generates the induction principle `ind-ℕ` (and its non-dependent form `rec-ℕ`), and every `match` elaborates to it. Recursion happens only through the hypothesis, so it always terminates.
 
 *Further reading:* the [HoTT Book](https://homotopytypetheory.org/book/), §1.9.

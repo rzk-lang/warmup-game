@@ -1,10 +1,10 @@
 ---
 id: left-inv
-title: A reversal undoes its path (★)
+title: A reversal undoes its path
 statement: 'concat A y x y (rev A x y p) p = refl'
 hints:
 - text: 'Induct on `p`. The base case is `refl`.'
-- text: 'Write `ind-path A x (\ w r → concat A w x w (rev A x w r) r = refl) refl y p`.'
+- text: 'The motive is `\ w r → concat A w x w (rev A x w r) r = refl` and the base case is `refl`. Assemble these with `ind-path`, inducting on `p`.'
 ---
 
 The other way round is trivial too: `concat (rev p) p = refl`. Together with the previous level, this makes reversal a genuine inverse for concatenation. Prove it by inducting on `p`.

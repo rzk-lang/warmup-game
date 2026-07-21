@@ -9,7 +9,7 @@ inventory:
   synopsis: concatenates two paths, from `x = y` and `y = z` to `x = z`
 hints:
 - text: 'Introduce `x` and `y`. The contraction `second c` gives, for each point, an equality from the center: `second c x : first c = x`.'
-- text: 'Route `x` to `y` through the center: reverse the path to `x`, then follow the path to `y`. Write `concat A x (first c) y (rev A (first c) x (second c x)) (second c y)`.'
+- text: 'Route `x` to `y` through the centre: reverse the centre-to-`x` path `second c x` with `rev`, then `concat` it with the centre-to-`y` path `second c y`.'
 ---
 
 The first step of the hierarchy: every contractible type is a proposition. Given a center `c` and its contraction, show that any two points `x` and `y` are equal, by routing both through the center.

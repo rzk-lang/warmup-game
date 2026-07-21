@@ -4,7 +4,7 @@ title: Swapping a pair
 statement: prod B A
 hints:
 - text: 'Build a new pair `(? , ?)`, this time with the `B` first.'
-- text: 'The new first component is `second p`, the new second is `first p`: write `(second p , first p)`.'
+- text: 'Build the new pair with `second p` first and `first p` second.'
 ---
 
 Turn a pair of an `A` and a `B` into a pair of a `B` and an `A`. Project out both components, then put them back in the other order.

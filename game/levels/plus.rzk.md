@@ -3,11 +3,11 @@ id: plus
 title: Addition
 statement: ℕ
 hints:
-- text: 'Recurse on `m` with `rec-ℕ`. The base returns `n`, and each step adds one to the running result.'
-- text: 'Write `rec-ℕ ℕ n (\ _ ih → succ ih) m`.'
+- text: 'Recurse on `m` with `match`. The `zero` branch returns `n`; the `succ` branch binds the predecessor `k` and the induction hypothesis `ih` (the result of the recursion on `k`).'
+- text: 'The `zero` branch returns `n`; the `succ k ih` branch returns `succ` of the hypothesis `ih`. Fill these into `match m (…)`.'
 ---
 
-Addition by recursion on the first argument: `plus zero n` is `n`, and `plus (succ m) n` is one more than `plus m n`. Build it with `rec-ℕ`.
+Addition by recursion on the first argument: `plus zero n` is `n`, and `plus (succ m) n` is one more than `plus m n`. Build it with `match`.
 
 Build it.
 
@@ -25,9 +25,11 @@ Build it.
 ```rzk solution
 #def plus (m n : ℕ)
   : ℕ
-  := rec-ℕ ℕ n (\ _ ih → succ ih) m
+  := match m
+       ( zero ⇒ n
+       | succ k ih ⇒ succ ih)
 ```
 
 ## Conclusion
 
-Recursion on `m`: the base returns `n`, and each `succ` adds one to the running total `ih`. That is addition, and it computes definitionally.
+Recursion on `m`: the `zero` branch returns `n`, and each `succ` adds one to the running total `ih`, the result of the recursion on the predecessor `k`. That `ih` binder is the **induction hypothesis** — recursion happens only through it, so every `match` terminates. That is addition, and it computes definitionally.

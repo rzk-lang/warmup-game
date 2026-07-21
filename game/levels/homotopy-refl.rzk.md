@@ -4,7 +4,7 @@ title: The reflexive homotopy
 statement: homotopy A B f f
 hints:
 - text: 'A homotopy is a function of `x` returning a proof that `f x = f x`.'
-- text: 'That proof is `refl`: write `\ x → refl`.'
+- text: 'Introduce `x`; the required proof `f x = f x` is `refl`.'
 ---
 
 Every function is homotopic to itself. Build the reflexive homotopy: at each point, the value equals itself.

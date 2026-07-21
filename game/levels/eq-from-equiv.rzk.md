@@ -1,20 +1,21 @@
 ---
 id: eq-from-equiv
-title: Equivalent types are equal (★)
+title: Equivalent types are equal
 statement: Equiv A B → (A = B)
 inventory:
 - name: ua
-  synopsis: the univalence axiom (postulated)
+  type: '(A : U) → (B : U) → Equiv (A = B) (Equiv A B)'
+  synopsis: the univalence axiom (assumed)
 - name: inv
   synopsis: extracts a left inverse from an equivalence
 - name: Equiv
   synopsis: the type of equivalences between two types
 hints:
 - text: 'Univalence `ua A B` is an equivalence `Equiv (A = B) (Equiv A B)`. Invert it to go from an `Equiv A B` back to an `A = B`.'
-- text: 'Apply `inv` to `ua A B`: write `inv (A = B) (Equiv A B) (ua A B)`.'
+- text: 'Invert the equivalence `ua A B` with `inv`. Recall `inv` takes the two related types first, then the equivalence.'
 ---
 
-The univalence direction: turn an equivalence into an equality of types. Feed the equivalence that `ua` provides through `inv`.
+The univalence direction: turn an equivalence into an equality of types. Univalence is *assumed* here as `ua`, and the definition names that dependence with `uses (ua)` — an honest record that this proof rests on an axiom, not on the constructions of the earlier chapters. Feed the equivalence that `ua` provides through `inv`, the inverse map you extracted in the previous section.
 
 Build it.
 
@@ -40,20 +41,22 @@ Build it.
 #def UnivalenceAxiom
   : U
   := (A : U) → (B : U) → Equiv (A = B) (Equiv A B)
-#postulate ua : UnivalenceAxiom
+#assume ua : UnivalenceAxiom
 #def inv (A B : U)
   : Equiv A B → (B → A)
   := \ e → first (first (second e))
 ```
 
 ```rzk template
-#def eq-from-Equiv (A B : U)
+#def eq-from-Equiv uses (ua)
+  (A B : U)
   : Equiv A B → (A = B)
   := ?
 ```
 
 ```rzk solution
-#def eq-from-Equiv (A B : U)
+#def eq-from-Equiv uses (ua)
+  (A B : U)
   : Equiv A B → (A = B)
   := inv (A = B) (Equiv A B) (ua A B)
 ```

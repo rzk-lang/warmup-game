@@ -4,7 +4,7 @@ title: Dependent functions
 statement: B a
 hints:
 - text: 'The goal `B a` is closed by a single application.'
-- text: 'Apply `f` to `a`: write `f a`.'
+- text: 'The goal `B a` is `f` applied to `a`.'
 ---
 
 So far every function returned a fixed type. A dependent function is more general: its result type may depend on the input, as in `f : (x : A) → B x`. Given such an `f` and an input `a`, produce the output. Application is all you need.

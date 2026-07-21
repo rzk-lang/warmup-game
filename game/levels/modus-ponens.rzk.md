@@ -4,7 +4,7 @@ title: Modus ponens
 statement: 'prod A (A → B) → B'
 hints:
 - text: 'Introduce the pair of premises; call it `p`. Its first component proves `A`, its second proves `A → B`.'
-- text: 'Apply the implication to the proof of `A`: write `second p (first p)`.'
+- text: 'Apply the implication (`second p`) to the proof of `A` (`first p`).'
 ---
 
 **Modus ponens** is the fundamental rule of logic: from `A` and `A → B`, conclude `B`. Here both premises are packed into one pair `p`. Take them apart and apply.

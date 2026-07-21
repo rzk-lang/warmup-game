@@ -4,7 +4,7 @@ title: The S combinator
 statement: A → C
 hints:
 - text: 'Introduce the input `x`. Both `f` and `g` will use it.'
-- text: '`f` wants an `A` and a `B`. Give it `x`, and get the `B` from `g x`: `f x (g x)`.'
+- text: '`f` wants an `A` and a `B`: give it `x` for the `A`, and `g x` for the `B`.'
 ---
 
 The `S` combinator is a classic: given `f : A → B → C` and `g : A → B`, it feeds one shared input to both. Together with the constant function it can express every other combinator, which is how variable binding can be translated away entirely.

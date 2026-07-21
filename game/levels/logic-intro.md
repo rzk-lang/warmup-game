@@ -19,6 +19,6 @@ Under the **Curry–Howard correspondence**, a proposition is a type and a proof
 
 So proving a propositional tautology is writing a function of the right type, and the term you write *is* the proof.
 
-*By the end of this chapter you will be able to:* prove the basic tautologies of implication and conjunction, work with negation and disjunction, and reason with the quantifiers.
+*By the end of this section you will be able to:* prove the basic tautologies of implication and conjunction, work with negation and disjunction, and reason with the quantifiers.
 
 *Further reading:* the [HoTT Book](https://homotopytypetheory.org/book/), §1.11.

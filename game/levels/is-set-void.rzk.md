@@ -4,7 +4,7 @@ title: The empty type is a set
 statement: is-set Void
 hints:
 - text: 'Among the arguments you are handed `x : Void`. From it, conclude anything.'
-- text: 'Apply `rec-Void` to `x` at the goal `p = q`: write `\ x y p q → rec-Void (p = q) x`.'
+- text: 'After introducing all four arguments, eliminate the `Void` element `x` with `rec-Void` at the goal `p = q`.'
 ---
 
 The empty type is a set for a trivial reason: it has no elements to compare, so any two proofs of any equality in it are equal, by ex falso. Prove it.

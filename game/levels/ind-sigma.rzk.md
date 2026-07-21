@@ -4,7 +4,7 @@ title: The induction principle for Σ-types
 statement: '(z : total-type A B) → C z'
 hints:
 - text: 'Pattern-match `z` as `(a , b)`. The goal becomes `C (a , b)`.'
-- text: 'That is `f a b`: write `\ (a , b) → f a b`.'
+- text: 'After pattern-matching `z` as `(a , b)`, apply `f` to `a` and `b`.'
 ---
 
 The induction principle for Σ-types: define a dependent function out of the Σ-type, with `C z` depending on the pair. This is the most general way to use a Σ-value.

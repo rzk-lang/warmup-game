@@ -4,7 +4,7 @@ title: Reflexivity
 statement: x = x
 hints:
 - text: 'Every point equals itself, and the proof is a single constructor.'
-- text: 'Write `refl`.'
+- text: 'The proof is reflexivity, the one constructor of the identity type.'
 ---
 
 The identity type `x = x` is the type of proofs that `x` equals itself. It has one constructor. Use it.

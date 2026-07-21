@@ -12,8 +12,6 @@ Equal types are equivalent: from a path `A = B` you can build an equivalence, by
 ua : (A B : U) → Equiv (A = B) (Equiv A B)
 ```
 
-Univalence is not provable in the theory so far, so it is assumed as a postulate. With it, an equivalence between types yields a genuine equality of types.
-
-*By the end of this section you will be able to:* turn a path into an equivalence, and, using univalence, turn an equivalence into a path.
+Univalence is not provable in the theory so far, so it is assumed as an axiom. With it, an equivalence between types yields a genuine equality of types.
 
 *Further reading:* the [HoTT Book](https://homotopytypetheory.org/book/), §2.10.

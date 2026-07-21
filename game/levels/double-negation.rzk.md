@@ -4,7 +4,7 @@ title: Double-negation introduction
 statement: '(a : A) → neg (neg A)'
 hints:
 - text: 'Introduce `a`, then a proof `f` of `neg A`. The goal is `Void`.'
-- text: 'A proof of `neg A` is a function `A → Void`. Apply it to `a`: write `\ a f → f a`.'
+- text: 'A proof `f : neg A` is a function `A → Void`. Introduce `a` and `f`, then apply `f` to `a`.'
 ---
 
 **Double-negation introduction**: if `A` holds, then `A` cannot be refuted. With `neg A` defined as `A → Void`, prove `A → neg (neg A)`.

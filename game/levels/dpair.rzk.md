@@ -4,7 +4,7 @@ title: A dependent pair
 statement: 'Σ (x : A) , B x'
 hints:
 - text: 'A Σ-value is still a pair `(? , ?)`.'
-- text: 'The first component is `a`, the second is `b`, of type `B a`: write `(a , b)`.'
+- text: 'Pair `a` with `b`; the second component has type `B a`.'
 ---
 
 In a **Σ-type** the type of the second component depends on the first. Here `b` has type `B a`, which mentions the chosen `a`. Even so, the value is built exactly like an ordinary pair.

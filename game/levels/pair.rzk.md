@@ -4,7 +4,7 @@ title: Building a pair
 statement: prod A B
 hints:
 - text: 'A pair is written `(? , ?)`. Tap the introduction move, or type the two components yourself.'
-- text: 'The first component is `a`, the second is `b`: write `(a , b)`.'
+- text: 'Pair `a` with `b`, in that order.'
 ---
 
 The product `prod A B` holds an `A` together with a `B`. You are given one of each. Put them together.

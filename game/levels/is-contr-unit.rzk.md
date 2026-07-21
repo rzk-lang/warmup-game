@@ -4,7 +4,7 @@ title: Unit is contractible
 statement: is-contr Unit
 hints:
 - text: 'A value of `is-contr Unit` is a pair `(center , proof)`: the center point, and a proof that every element equals it.'
-- text: 'The center is `unit`, and every element equals it by `refl`: write `(unit , \ x → refl)`.'
+- text: 'Take `unit` as the centre; every element equals it by `refl`.'
 ---
 
 A **contractible** type has a center point to which everything is equal. Show `Unit` is contractible: give the center, and the proof that every element equals it.

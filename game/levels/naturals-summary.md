@@ -4,6 +4,6 @@ title: What you built
 role: summary
 ---
 
-The naturals are `zero` and `succ`, and `ind-ℕ` is mathematical induction with a hypothesis for the predecessor. Recursion builds functions like doubling and addition from a base and a step, and they compute definitionally.
+Three inductive types, all declared with `#data` and taken apart with `match`, one branch per constructor: the empty type and coproducts (falsity and disjunction), the booleans, and the natural numbers. A `match` on a recursive type like `ℕ` binds an induction hypothesis and is genuine mathematical induction, elaborating to the generated `ind-ℕ`. Because `#data`'s computation rules are definitional, all of these compute on their own.
 
 That completes the dependent-types toolkit. Next: logic, read as types.

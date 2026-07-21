@@ -4,7 +4,7 @@ title: The recursion principle for Σ-types
 statement: total-type A B → C
 hints:
 - text: 'Pattern-match the pair: `\ (a , b) → ?`, with `a : A` and `b : B a`.'
-- text: 'Combine them with `f`: write `\ (a , b) → f a b`.'
+- text: 'After pattern-matching, combine `a` and `b` with `f`.'
 ---
 
 The recursion principle for Σ-types, the dependent generalization of the one for products. Given `f` that takes a first component `a` and a second `b : B a`, define a function out of the Σ-type into any type `C`.

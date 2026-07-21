@@ -3,8 +3,8 @@ id: coprod-swap
 title: Swapping a coproduct
 statement: coprod A B → coprod B A
 hints:
-- text: 'Eliminate the input with `rec-coprod`, targeting `coprod B A`, with a handler per side.'
-- text: 'Send a left `a` to the right, and a right `b` to the left: write `rec-coprod A B (coprod B A) (\ a → inr B A a) (\ b → inl B A b)`.'
+- text: 'Take the input apart with `match`: one branch per constructor, `inl a ⇒ …` and `inr b ⇒ …`, each landing in `coprod B A`.'
+- text: 'Send `inl a` to the right with `inr B A`, and `inr b` to the left with `inl B A`. Fill these into `match w (…)` under a `\ w →`.'
 ---
 
 A disjoint union does not care about the order of its two sides. Turn a `coprod A B` into a `coprod B A` by swapping the tags.
@@ -27,9 +27,11 @@ Build it.
 ```rzk solution
 #def coprod-swap (A B : U)
   : coprod A B → coprod B A
-  := rec-coprod A B (coprod B A) (\ a → inr B A a) (\ b → inl B A b)
+  := \ w → match w
+       ( inl a ⇒ inr B A a
+       | inr b ⇒ inl B A b)
 ```
 
 ## Conclusion
 
-Each case is re-tagged: `inl` becomes `inr` and `inr` becomes `inl`. Case analysis with `rec-coprod`, plus the two injections, is all it takes.
+Each case is re-tagged: `inl` becomes `inr` and `inr` becomes `inl`. Case analysis with `match`, plus the two injections, is all it takes. A `match` gives one branch per constructor and binds that constructor's fields — here the value `a` under `inl`, and `b` under `inr`.

@@ -4,7 +4,7 @@ title: The axiom of choice
 statement: 'Σ (f : A → B) , (x : A) → R x (f x)'
 hints:
 - text: 'The result is a pair: the choice function, then the proof it works. Build `( ? , ? )`.'
-- text: 'The function picks the first component of `g a`, and the proof reads off the second: write `( \ a → first (g a) , \ x → second (g x) )`.'
+- text: 'Build the pair whose function picks the first component of `g a`, and whose proof reads off the second.'
 ---
 
 From `g`, which for each `x` gives a `y : B` together with a proof of `R x y`, build a single choice function `f : A → B` and a proof that `R x (f x)` holds for every `x`. Everything is pairing and projection.

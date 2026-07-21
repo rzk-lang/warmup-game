@@ -7,7 +7,7 @@ inventory:
   synopsis: the identity function on a type
 hints:
 - text: 'An `is-equiv` is a pair of a retraction and a section. Both are the identity here.'
-- text: 'Each round-trip is homotopic to the identity by `refl`: write `((identity A , \ _ → refl) , (identity A , \ _ → refl))`.'
+- text: 'Both retraction and section are `identity A`, and each round-trip is homotopic to the identity by `refl`. Nest the two `(function , homotopy)` pairs.'
 ---
 
 The identity function is an equivalence: it is its own retraction and its own section. Build the two witnesses.

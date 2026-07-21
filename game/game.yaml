@@ -7,10 +7,9 @@ title: Rzk Warm-up
 # rules. Chapters "Equivalences and univalence" and "A taste of directed types"
 # are planned but not yet authored.
 chapters:
-- title: Getting started
-  sections:
+- sections:
   - id: getting-started
-    title: How holes work
+    title: Getting started
     items:
     - prose:
         file: levels/how-holes-work.md
@@ -60,7 +59,7 @@ chapters:
     - prose:
         file: levels/products-summary.md
   - id: type-formers
-    title: Type formers
+    title: Type formers, recursion, induction
     items:
     - prose:
         file: levels/type-formers-intro.md
@@ -71,8 +70,10 @@ chapters:
     - prose:
         file: levels/type-formers-summary.md
   - id: sigma
-    title: Σ-types
+    title: Σ-types and the axiom of choice
     items:
+    - prose:
+        file: levels/sigma-aoc-intro.md
     - prose:
         file: levels/sigma-intro.md
     - puzzle:
@@ -84,17 +85,16 @@ chapters:
     - puzzle:
         file: levels/ind-sigma.rzk.md
     - prose:
-        file: levels/sigma-summary.md
-  - id: axiom-of-choice
-    title: The axiom of choice
-    items:
-    - prose:
         file: levels/aoc-intro.md
     - puzzle:
         file: levels/aoc.rzk.md
-  - id: coproducts
-    title: Coproducts
+    - prose:
+        file: levels/sigma-summary.md
+  - id: inductive-types
+    title: Coproducts, booleans, natural numbers
     items:
+    - prose:
+        file: levels/inductive-types-intro.md
     - prose:
         file: levels/coproducts-intro.md
     - puzzle:
@@ -102,21 +102,11 @@ chapters:
     - puzzle:
         file: levels/coprod-swap.rzk.md
     - prose:
-        file: levels/coproducts-summary.md
-  - id: booleans
-    title: Booleans
-    items:
-    - prose:
         file: levels/booleans-intro.md
     - puzzle:
         file: levels/not.rzk.md
     - puzzle:
         file: levels/and.rzk.md
-    - prose:
-        file: levels/booleans-summary.md
-  - id: naturals
-    title: Natural numbers
-    items:
     - prose:
         file: levels/naturals-intro.md
     - puzzle:
@@ -125,8 +115,6 @@ chapters:
         file: levels/plus.rzk.md
     - prose:
         file: levels/naturals-summary.md
-- title: Propositions as types
-  sections:
   - id: logic
     title: Propositions as types
     items:
@@ -141,9 +129,6 @@ chapters:
     - puzzle:
         file: levels/s-axiom.rzk.md
         role: extra
-  - id: negation
-    title: Negation and disjunction
-    items:
     - prose:
         file: levels/negation-intro.md
     - puzzle:
@@ -152,9 +137,6 @@ chapters:
         file: levels/neg-coprod.rzk.md
     - puzzle:
         file: levels/neg-prod.rzk.md
-  - id: quantifiers
-    title: Quantifiers
-    items:
     - prose:
         file: levels/quantifiers-intro.md
     - puzzle:
@@ -165,10 +147,8 @@ chapters:
         file: levels/forall-prod.rzk.md
     - prose:
         file: levels/logic-summary.md
-- title: Identity types
-  sections:
   - id: paths
-    title: Identity types and paths
+    title: Identity types
     items:
     - prose:
         file: levels/paths-intro.md
@@ -182,6 +162,9 @@ chapters:
         file: levels/concat.rzk.md
     - puzzle:
         file: levels/transport.rzk.md
+    - puzzle:
+        file: levels/not-not-is-identity.rzk.md
+        role: extra
     - puzzle:
         file: levels/right-unit.rzk.md
         role: extra
@@ -197,9 +180,6 @@ chapters:
     - puzzle:
         file: levels/left-inv.rzk.md
         role: extra
-  - id: fibers
-    title: Σ-types with identity
-    items:
     - prose:
         file: levels/fiber-intro.md
     - puzzle:
@@ -209,10 +189,10 @@ chapters:
         role: extra
     - prose:
         file: levels/paths-summary.md
-- title: Equivalences and univalence
+- title: Homotopy Type Theory
   sections:
   - id: equivalences
-    title: Homotopy and equivalence
+    title: Equivalences and univalence
     items:
     - prose:
         file: levels/equivalences-intro.md
@@ -222,9 +202,8 @@ chapters:
         file: levels/is-equiv-identity.rzk.md
     - puzzle:
         file: levels/equiv-identity.rzk.md
-  - id: univalence
-    title: Univalence
-    items:
+    - puzzle:
+        file: levels/inv.rzk.md
     - prose:
         file: levels/univalence-intro.md
     - puzzle:
@@ -234,8 +213,6 @@ chapters:
         role: extra
     - prose:
         file: levels/equivalences-summary.md
-- title: Sets and logic
-  sections:
   - id: hlevels
     title: Contractibility, propositions, and sets
     items:
@@ -259,15 +236,14 @@ chapters:
 - title: A taste of directed types
   sections:
   - id: directed
-    title: The directed interval
+    title: Morphisms and triangles
     items:
+    - prose:
+        file: levels/directed-shapes-intro.md
     - prose:
         file: levels/directed-intro.md
     - puzzle:
         file: levels/id-morphism.rzk.md
-  - id: triangles
-    title: Triangles
-    items:
     - prose:
         file: levels/triangles-intro.md
     - puzzle:

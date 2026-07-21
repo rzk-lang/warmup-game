@@ -4,7 +4,7 @@ title: The identity morphism
 statement: hom A x x
 hints:
 - text: 'The goal is a map out of `Δ¹`. Introduce the interval coordinate `t`, then return a point of `A`.'
-- text: 'Stay at `x` for the whole interval: write `\ t → x`.'
+- text: 'Introduce the interval coordinate, ignore it, and return `x`.'
 ---
 
 The simplest morphism is the identity at a point: the one that stays at `x` all the way along the interval. Both endpoints are `x`, so a constant path will do.

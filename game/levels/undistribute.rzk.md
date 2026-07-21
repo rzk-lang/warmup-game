@@ -4,7 +4,7 @@ title: Undistributing
 statement: 'prod (A → B) (A → C) → A → prod B C'
 hints:
 - text: 'Introduce the pair and the argument; call them `p` and `a`. The goal becomes a pair.'
-- text: 'Apply each component of `p` to `a`: write `(first p a , second p a)`.'
+- text: 'Apply each component of `p` to `a`, and pair the two results.'
 ---
 
 The converse of the previous level. Given proofs of `A → B` and `A → C`, build a proof that `A` implies both `B` and `C`.

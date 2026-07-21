@@ -11,10 +11,12 @@ inventory:
   synopsis: every type is equivalent to itself
 hints:
 - text: 'Induct on `p` with `ind-path` at the universe `U`. The base case asks for `Equiv A A`.'
-- text: 'That is `Equiv-identity A`: write `ind-path U A (\ e _ → Equiv A e) (Equiv-identity A) B p`.'
+- text: 'The motive is `\ e _ → Equiv A e` and the base case is `Equiv-identity A`. Assemble these with `ind-path` at the universe `U`, inducting on `p`.'
 ---
 
 From a path between types, build an equivalence between them. Induct on the path: when it is `refl`, the equivalence is the identity.
+
+One caveat before you start. Here `p : A = B` is an equality between *types*, not between elements of a fixed type — an identity one universe up from the paths you have been proving so far. Inducting on it means path induction over the universe `U` itself, which relies on Rzk treating `U` as its own type. That is convenient here, but it is not yet on firm footing (a proper account needs universe levels, which Rzk does not track for now). So read this level as a preview of the shape univalent reasoning takes, rather than a proof to rely on.
 
 Build it.
 

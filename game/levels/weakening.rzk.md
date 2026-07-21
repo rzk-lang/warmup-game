@@ -4,7 +4,7 @@ title: Weakening
 statement: 'A → B → A'
 hints:
 - text: 'Introduce the two arguments; call them `a` and `b`. The goal becomes `A`.'
-- text: 'Return the proof you already have, ignoring `b`: write `\ a b → a`.'
+- text: 'After introducing both arguments, return the first and ignore the second.'
 ---
 
 If `A` holds, it still holds no matter what else you assume. Given a proof of `A`, produce, for any `B`, a proof of `B → A`.
