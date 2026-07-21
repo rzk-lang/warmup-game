@@ -1,15 +1,11 @@
-title: Rzk Game Template
+title: Rzk Warm-up
 
-# A small but complete game over the hom A x x substrate. It covers every item
-# type, prose role, and puzzle feature, so a forking author can read one of each
-# and copy it. The mathematics is deliberately trivial; the point is the
-# authoring surface. See docs/authoring.md in the engine repo.
-#
-# The table of contents is a list of chapters. A chapter has an optional title
-# and a list of sections; a section has an id, a title, and ordered items. An
-# untitled chapter (the first one below) renders its sections at the top level,
-# so a flat game is just one untitled chapter. A titled chapter (the second)
-# shows as a heading in the level picker.
+# The default Rzk tutorial: an on-ramp to Rzk's type theory, built by filling
+# holes. It starts from nothing and, over later chapters, arrives at a first
+# taste of directed types. See notes/content-map.md for the full chapter/section
+# plan (mapping the BMSTU tutorial), and notes/conventions.md for the authoring
+# rules. Chapters "Equivalences and univalence" and "A taste of directed types"
+# are planned but not yet authored.
 chapters:
 - sections:
   - id: getting-started
@@ -18,36 +14,239 @@ chapters:
     - prose:
         file: levels/how-holes-work.md
     - prose:
-        file: levels/start.md
+        file: levels/anatomy-of-a-def.md
+    - puzzle:
+        file: levels/first-hole.rzk.md
     - prose:
-        file: levels/outcomes.md
+        file: levels/getting-started-summary.md
+- title: Dependent types
+  sections:
+  - id: functions
+    title: Functions
+    items:
+    - prose:
+        file: levels/functions-intro.md
     - puzzle:
         file: levels/identity.rzk.md
     - puzzle:
-        file: levels/self-check.rzk.md
-        role: pretest
-        remedies:
-        - label: 'Review: Getting started'
-          section: getting-started
-        - label: 'Rzk: the directed interval'
-          url: https://rzk-lang.github.io/sHoTT/simplicial-hott/05-segal-types.rzk/
+        file: levels/const.rzk.md
     - puzzle:
-        file: levels/carry-on.rzk.md
-        prereqs:
-        - self-check
+        file: levels/compose.rzk.md
+    - puzzle:
+        file: levels/flip.rzk.md
+    - puzzle:
+        file: levels/s-comb.rzk.md
+        role: extra
+    - puzzle:
+        file: levels/apply.rzk.md
     - prose:
-        file: levels/recap.md
-- title: More moves
-  sections:
-  - id: more-moves
-    title: Gating and a bonus
+        file: levels/functions-summary.md
+  - id: products
+    title: Products
     items:
     - prose:
-        file: levels/aside.md
+        file: levels/products-intro.md
     - puzzle:
-        file: levels/no-idj.rzk.md
+        file: levels/pair.rzk.md
     - puzzle:
-        file: levels/bonus.rzk.md
+        file: levels/fst.rzk.md
+    - puzzle:
+        file: levels/swap.rzk.md
+    - puzzle:
+        file: levels/curry.rzk.md
+    - puzzle:
+        file: levels/uncurry.rzk.md
+    - prose:
+        file: levels/products-summary.md
+  - id: type-formers
+    title: Type formers, recursion, induction
+    items:
+    - prose:
+        file: levels/type-formers-intro.md
+    - puzzle:
+        file: levels/rec-prod.rzk.md
+    - puzzle:
+        file: levels/ind-prod.rzk.md
+    - prose:
+        file: levels/type-formers-summary.md
+  - id: sigma
+    title: Σ-types and the axiom of choice
+    items:
+    - prose:
+        file: levels/sigma-aoc-intro.md
+    - prose:
+        file: levels/sigma-intro.md
+    - puzzle:
+        file: levels/dpair.rzk.md
+    - puzzle:
+        file: levels/dsnd.rzk.md
+    - puzzle:
+        file: levels/rec-sigma.rzk.md
+    - puzzle:
+        file: levels/ind-sigma.rzk.md
+    - prose:
+        file: levels/aoc-intro.md
+    - puzzle:
+        file: levels/aoc.rzk.md
+    - prose:
+        file: levels/sigma-summary.md
+  - id: inductive-types
+    title: Coproducts, booleans, natural numbers
+    items:
+    - prose:
+        file: levels/inductive-types-intro.md
+    - prose:
+        file: levels/coproducts-intro.md
+    - puzzle:
+        file: levels/ex-falso.rzk.md
+    - puzzle:
+        file: levels/coprod-swap.rzk.md
+    - prose:
+        file: levels/booleans-intro.md
+    - puzzle:
+        file: levels/not.rzk.md
+    - puzzle:
+        file: levels/and.rzk.md
+    - prose:
+        file: levels/naturals-intro.md
+    - puzzle:
+        file: levels/double-nat.rzk.md
+    - puzzle:
+        file: levels/plus.rzk.md
+    - prose:
+        file: levels/naturals-summary.md
+  - id: logic
+    title: Propositions as types
+    items:
+    - prose:
+        file: levels/logic-intro.md
+    - puzzle:
+        file: levels/truth.rzk.md
+    - puzzle:
+        file: levels/weakening.rzk.md
+    - puzzle:
+        file: levels/modus-ponens.rzk.md
+    - puzzle:
+        file: levels/s-axiom.rzk.md
         role: extra
     - prose:
-        file: levels/done.md
+        file: levels/negation-intro.md
+    - puzzle:
+        file: levels/double-negation.rzk.md
+    - puzzle:
+        file: levels/neg-coprod.rzk.md
+    - puzzle:
+        file: levels/neg-prod.rzk.md
+    - prose:
+        file: levels/quantifiers-intro.md
+    - puzzle:
+        file: levels/distribute.rzk.md
+    - puzzle:
+        file: levels/undistribute.rzk.md
+    - puzzle:
+        file: levels/forall-prod.rzk.md
+    - prose:
+        file: levels/logic-summary.md
+  - id: paths
+    title: Identity types
+    items:
+    - prose:
+        file: levels/paths-intro.md
+    - puzzle:
+        file: levels/refl.rzk.md
+    - puzzle:
+        file: levels/rev.rzk.md
+    - puzzle:
+        file: levels/ap.rzk.md
+    - puzzle:
+        file: levels/concat.rzk.md
+    - puzzle:
+        file: levels/transport.rzk.md
+    - puzzle:
+        file: levels/not-not-is-identity.rzk.md
+        role: extra
+    - puzzle:
+        file: levels/right-unit.rzk.md
+        role: extra
+    - puzzle:
+        file: levels/concat-assoc.rzk.md
+        role: extra
+    - puzzle:
+        file: levels/left-unit.rzk.md
+        role: extra
+    - puzzle:
+        file: levels/right-inv.rzk.md
+        role: extra
+    - puzzle:
+        file: levels/left-inv.rzk.md
+        role: extra
+    - prose:
+        file: levels/fiber-intro.md
+    - puzzle:
+        file: levels/fiber-point.rzk.md
+    - puzzle:
+        file: levels/pair-path.rzk.md
+        role: extra
+    - prose:
+        file: levels/paths-summary.md
+- title: Homotopy Type Theory
+  sections:
+  - id: equivalences
+    title: Equivalences and univalence
+    items:
+    - prose:
+        file: levels/equivalences-intro.md
+    - puzzle:
+        file: levels/homotopy-refl.rzk.md
+    - puzzle:
+        file: levels/is-equiv-identity.rzk.md
+    - puzzle:
+        file: levels/equiv-identity.rzk.md
+    - puzzle:
+        file: levels/inv.rzk.md
+    - prose:
+        file: levels/univalence-intro.md
+    - puzzle:
+        file: levels/idtoequiv.rzk.md
+    - puzzle:
+        file: levels/eq-from-equiv.rzk.md
+        role: extra
+    - prose:
+        file: levels/equivalences-summary.md
+  - id: hlevels
+    title: Contractibility, propositions, and sets
+    items:
+    - prose:
+        file: levels/hott-intro.md
+    - puzzle:
+        file: levels/is-prop-unit.rzk.md
+    - puzzle:
+        file: levels/is-contr-unit.rzk.md
+    - puzzle:
+        file: levels/contr-is-prop.rzk.md
+    - puzzle:
+        file: levels/inhabited-prop-is-contr.rzk.md
+    - puzzle:
+        file: levels/is-set-void.rzk.md
+    - puzzle:
+        file: levels/is-set-unit.rzk.md
+        role: extra
+    - prose:
+        file: levels/hott-summary.md
+- title: A taste of directed types
+  sections:
+  - id: directed
+    title: Morphisms and triangles
+    items:
+    - prose:
+        file: levels/directed-shapes-intro.md
+    - prose:
+        file: levels/directed-intro.md
+    - puzzle:
+        file: levels/id-morphism.rzk.md
+    - prose:
+        file: levels/triangles-intro.md
+    - puzzle:
+        file: levels/const-triangle.rzk.md
+    - prose:
+        file: levels/directed-summary.md

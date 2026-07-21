@@ -1,12 +1,15 @@
 ---
-id: bonus
+id: const-triangle
+title: The constant triangle
 statement: hom2 A x x x (id-hom A x) (id-hom A x) (id-hom A x)
-title: A constant triangle (bonus)
+hints:
+- text: 'The goal is a map out of `Δ²`. Introduce the two coordinates, then return a point of `A`.'
+- text: 'Introduce the two coordinates, ignore them, and return `x`.'
 ---
 
-An optional ★ level. Marked `extra` in `game.yaml`, it does not gate completion of the section — it is enrichment for anyone who wants it.
+The simplest triangle is the constant one at `x`, whose three edges are all the identity morphism. Fill it with the constant map: two coordinates now, but the value never moves.
 
-A triangle (`hom2`) is a map out of the $2$-simplex $\Delta^2$. The constant triangle at $x$, whose three edges are all the identity, is filled by the constant map. Two coordinates this time, but the value never moves.
+Build it.
 
 ```rzk prelude
 #lang rzk-1
@@ -29,17 +32,17 @@ A triangle (`hom2`) is a map out of the $2$-simplex $\Delta^2$. The constant tri
 ```
 
 ```rzk template
-#def bonus (A : U) (x : A)
+#def const-triangle (A : U) (x : A)
   : hom2 A x x x (id-hom A x) (id-hom A x) (id-hom A x)
   := ?
 ```
 
 ```rzk solution
-#def bonus (A : U) (x : A)
+#def const-triangle (A : U) (x : A)
   : hom2 A x x x (id-hom A x) (id-hom A x) (id-hom A x)
   := \ (t , s) → x
 ```
 
 ## Conclusion
 
-The constant triangle ignores both coordinates. With the identity on every edge, $x$ itself fills the whole simplex.
+The constant triangle ignores both coordinates. With the identity on every edge, `x` fills the whole simplex.
