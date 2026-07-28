@@ -2,6 +2,11 @@
 id: and
 title: Conjunction
 statement: Bool
+checks:
+- and true true = true
+- and true false = false
+- and false true = false
+- and false false = false
 hints:
 - text: 'Case-analyse the first argument `a` with `match`. If `a` is `false`, the answer is `false`; if `a` is `true`, the answer is `b`.'
 - text: 'Assemble the two cases as a single `match a (false ⇒ … | true ⇒ …)`, filling each branch from the first hint.'

@@ -2,6 +2,9 @@
 id: not
 title: Negation
 statement: Bool → Bool
+checks:
+- not true = false
+- not false = true
 hints:
 - text: '`match b` takes one branch per constructor: a value for `false` and a value for `true`.'
 - text: 'The `false` branch gives `true`, the `true` branch gives `false`; put them in `match b (false ⇒ … | true ⇒ …)` under a `\ b →`.'
