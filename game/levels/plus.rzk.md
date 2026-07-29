@@ -2,6 +2,13 @@
 id: plus
 title: Addition
 statement: ℕ
+checks:
+- prop: plus (succ zero) (succ zero) = succ (succ zero)
+  label: 1 + 1 = 2
+- prop: plus zero (succ zero) = succ zero
+  label: 0 + 1 = 1
+- prop: plus (succ zero) zero = succ zero
+  label: 1 + 0 = 1
 hints:
 - text: 'Recurse on `m` with `match`. The `zero` branch returns `n`; the `succ` branch binds the predecessor `k` and the induction hypothesis `ih` (the result of the recursion on `k`).'
 - text: 'The `zero` branch returns `n`; the `succ k ih` branch returns `succ` of the hypothesis `ih`. Fill these into `match m (…)`.'
