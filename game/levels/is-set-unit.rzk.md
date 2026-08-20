@@ -1,9 +1,14 @@
 ---
+forbidden:
+- idJ
+inventory:
+- name: ind-path
+  synopsis: 'path induction: reduces a goal about a path to the refl case'
 id: is-set-unit
 title: The unit type is a set
 statement: is-set Unit
 hints:
-- text: 'Introduce the two elements `x y : Unit` and the two paths `p q : x = y`; you must prove `p = q`. Both `idJ` moves are offered — you will induct on `p`, then on `q`.'
+- text: 'Introduce the two elements `x y : Unit` and the two paths `p q : x = y`; you must prove `p = q`. This one takes two inductions: on `p`, then on `q`.'
 - text: 'A double path induction. Induct on `p` first: its base case turns the goal into `refl = q`. Then induct on `q`: its base case is `refl = refl`, closed by `refl`.'
 - text: 'The outer motive is `\ w s → s = q` — it mentions the path `s`, unlike the earlier levels — and the inner motive is `\ w t → refl_{x} = t`, with both base cases `refl`. Assemble the two `ind-path` calls, the inner one supplying the outer base case.'
 ---

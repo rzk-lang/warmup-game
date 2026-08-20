@@ -16,6 +16,8 @@ hints:
 
 Double a number: send `zero` to `zero`, and add two at each successor step. Build it with `match`.
 
+If you have written recursive definitions in another proof assistant, the shape here is worth a second look. There is no recursive call: `double-ℕ` is not in scope inside its own body, so `double-ℕ k` is not something you can write. Instead the `succ` branch binds **two** variables, `succ k ih`: the predecessor `k`, and `ih`, the result of the function on that predecessor. Everything a recursive call would have given you is already handed to you as `ih`, which is why the recursion always terminates and always computes.
+
 Build it.
 
 ```rzk prelude
@@ -40,3 +42,5 @@ Build it.
 ## Conclusion
 
 Recursion turns a base branch and a step branch into a function on `ℕ`. Because computation is definitional, `double-ℕ` applied to a numeral computes to its double on the nose.
+
+The induction hypothesis `ih` is the recursive call, already made. Naming it rather than writing it is what makes `match` a total, computing eliminator instead of a general recursion you would have to justify.

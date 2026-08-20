@@ -1,4 +1,9 @@
 ---
+forbidden:
+- idJ
+inventory:
+- name: ind-path
+  synopsis: 'path induction: reduces a goal about a path to the refl case'
 id: left-unit
 title: The left unit law
 statement: 'concat A x x y refl p = p'
