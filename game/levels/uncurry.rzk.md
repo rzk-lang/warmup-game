@@ -33,3 +33,5 @@ Build it.
 ## Conclusion
 
 Uncurrying projects the pair and applies `f` to the pieces. With currying, it shows that a function on pairs and a two-argument function are interchangeable.
+
+Rzk also lets a lambda take the pair apart as it binds it, writing `\ (a , b) → f a b` instead of projecting `p` twice. That notation comes into its own with the induction principle for products, a few levels on.

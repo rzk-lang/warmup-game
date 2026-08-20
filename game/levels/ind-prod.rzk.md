@@ -9,6 +9,8 @@ hints:
 
 The **induction principle** is the dependent version of recursion: the result type `C z` may depend on the pair `z`. Given `f` that handles a literal pair `(a , b)`, define the dependent function.
 
+This is where rzk's **pattern-matching lambda** earns its keep. Writing `\ (a , b) → …` binds the two components directly, rather than binding the pair and projecting it. The difference matters here: after `\ (a , b) →` the goal is `C (a , b)`, which is exactly what `f` produces, whereas under `\ z →` it would still read `C z` and `f (first z) (second z)` would not fit without help.
+
 Build it.
 
 ```rzk prelude

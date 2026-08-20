@@ -9,6 +9,15 @@ hints:
 
 The empty type is a set for a trivial reason: it has no elements to compare, so any two proofs of any equality in it are equal, by ex falso. Prove it.
 
+`#data Void` generated two eliminators, and either will do here:
+
+```
+rec-Void : (C : U) → Void → C
+ind-Void : (C : Void → U) → (x : Void) → C x
+```
+
+`rec-Void` lands in a fixed type, `ind-Void` in one that may depend on the impossible element.
+
 Build it.
 
 ```rzk prelude
