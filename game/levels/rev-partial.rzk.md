@@ -1,4 +1,6 @@
 ---
+forbidden:
+- idJ
 id: rev-partial
 title: Reversal, without naming the path
 statement: (x = y) → y = x

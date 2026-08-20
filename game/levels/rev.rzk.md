@@ -1,4 +1,6 @@
 ---
+forbidden:
+- idJ
 id: rev
 title: Reversing a path
 statement: y = x

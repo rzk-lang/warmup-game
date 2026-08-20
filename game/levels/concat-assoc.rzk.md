@@ -1,4 +1,9 @@
 ---
+forbidden:
+- idJ
+inventory:
+- name: ind-path
+  synopsis: 'path induction: reduces a goal about a path to the refl case'
 id: concat-assoc
 title: Concatenation is associative
 statement: 'concat A x z w (concat A x y z p q) r = concat A x y w p (concat A y z w q r)'

@@ -1,4 +1,6 @@
 ---
+forbidden:
+- idJ
 id: ap
 title: A function acts on a path
 statement: f x = f y

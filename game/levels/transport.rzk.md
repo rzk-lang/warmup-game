@@ -1,4 +1,6 @@
 ---
+forbidden:
+- idJ
 id: transport
 title: Transport
 statement: B y

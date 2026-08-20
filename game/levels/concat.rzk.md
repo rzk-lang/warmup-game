@@ -1,4 +1,6 @@
 ---
+forbidden:
+- idJ
 id: concat
 title: Concatenating paths
 statement: x = z

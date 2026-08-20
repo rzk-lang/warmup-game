@@ -1,4 +1,6 @@
 ---
+forbidden:
+- idJ
 id: idtoequiv
 title: Equal types are equivalent
 statement: Equiv A B

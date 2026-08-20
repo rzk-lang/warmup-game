@@ -1,4 +1,9 @@
 ---
+forbidden:
+- idJ
+inventory:
+- name: ind-path
+  synopsis: 'path induction: reduces a goal about a path to the refl case'
 id: right-inv
 title: A path undoes its reversal
 statement: 'concat A x y x p (rev A x y p) = refl'
