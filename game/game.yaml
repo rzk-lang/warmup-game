@@ -157,6 +157,9 @@ chapters:
     - puzzle:
         file: levels/rev.rzk.md
     - puzzle:
+        file: levels/rev-partial.rzk.md
+        role: extra
+    - puzzle:
         file: levels/ap.rzk.md
     - puzzle:
         file: levels/concat.rzk.md
