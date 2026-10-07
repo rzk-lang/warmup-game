@@ -10,12 +10,12 @@ The pin lives in `deploy.yml` as the `engine-version` input. It is set to a rele
 
 ## Content
 
-The chapters follow a points-to-morphisms arc. Authored so far:
+The tutorial follows a points-to-morphisms arc:
 
-- **Getting started** — how holes work (the header's ❓ link), a first trivial hole, a summary.
-- **Functions** — identity, constant, composition, argument swapping, the ★ `S` combinator, and dependent application.
-
-Later chapters (planned): propositions as types, identity types and path algebra, equivalences and univalence, sets and logic, and a closing taste of directed types.
+- **Getting started:** holes and definitions.
+- **Dependent types:** functions, products, recursion and induction, Σ-types and the axiom of choice, coproducts, booleans, natural numbers, propositions as types, and identity types.
+- **Homotopy Type Theory:** equivalences and univalence, contractibility, propositions, and sets.
+- **A taste of directed types:** morphisms and triangles.
 
 ## Playing locally
 
